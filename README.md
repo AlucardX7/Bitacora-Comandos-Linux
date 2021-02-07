@@ -4,11 +4,11 @@
 
 ip addr
 =======
-=======
+
 
 Muestra IPs, manipula el routing, dispositivos de red, intercaes y tuneles.
 
-opciones:
+OPCIONES:
 
 -V, -Version
               Print the version of the ip utility and exit.
