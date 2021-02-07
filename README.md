@@ -707,12 +707,12 @@ MiB Mem :   3936,0 total,   1419,8 libre,    766,4 usado,   1749,8 búfer/caché
 MiB Intercambio:   2048,0 total,   2048,0 libre,      0,0 usado.   2873,0 dispon Mem 
 
     PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU  %MEM     HORA+ ORDEN                                                                                            
-   1343 user  20   0  547328  77304  48888 S   4,0   1,9   0:38.13 Xorg                                                                                             
-   1533 user  20   0 3741596 349924 132976 S   2,7   8,7   0:47.97 gnome-shell                                                                                      
-   2029 user  20   0  825036  52160  40088 S   1,0   1,3   0:08.12 gnome-terminal-                                                                                  
-   1678 user  20   0  695788  29416  22260 S   0,3   0,7   0:00.20 gsd-media-keys                                                                                   
-   1681 user  20   0  353860  27676  21024 S   0,3   0,7   0:00.20 gsd-power                                                                                        
-   1826 user  20   0 1100320 199708  46904 S   0,3   5,0   0:05.88 snap-store
+    1343 user  20   0  547328  77304  48888 S   4,0   1,9   0:38.13 Xorg                                                                                             
+    1533 user  20   0 3741596 349924 132976 S   2,7   8,7   0:47.97 gnome-shell                                                                                      
+    2029 user  20   0  825036  52160  40088 S   1,0   1,3   0:08.12 gnome-terminal-                                                                                  
+    1678 user  20   0  695788  29416  22260 S   0,3   0,7   0:00.20 gsd-media-keys                                                                                   
+    1681 user  20   0  353860  27676  21024 S   0,3   0,7   0:00.20 gsd-power                                                                                        
+    1826 user  20   0 1100320 199708  46904 S   0,3   5,0   0:05.88 snap-store
 
 
 user@computername:~$top -d 10
@@ -726,8 +726,8 @@ MiB Intercambio:   2048,0 total,   2048,0 libre,      0,0 usado.   2873,1 dispon
 
     PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU  %MEM     HORA+ ORDEN                                                                                            
     955 user    20   0 1491188  19416  15240 S   0,5   0,5   0:02.24 pulseaudio                                                                                       
-   1533 user    20   0 3741340 349600 132732 S   0,4   8,7   0:48.89 gnome-shell                                                                                      
-   1343 user    20   0  547072  77304  48888 S   0,2   1,9   0:39.02 Xorg        
+    1533 user    20   0 3741340 349600 132732 S   0,4   8,7   0:48.89 gnome-shell                                                                                      
+    1343 user    20   0  547072  77304  48888 S   0,2   1,9   0:39.02 Xorg        
 
 
 ps
