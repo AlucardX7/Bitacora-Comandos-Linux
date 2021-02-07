@@ -479,11 +479,11 @@ EJEMPLOS:
 
 user@computername:~$cd ..
 
-user@computername:~$/home$
+	user@computername:~$/home$
 
 user@computername:~$ cd Documentos/test
 
-user@computername:~/Documentos/test$
+	user@computername:~/Documentos/test$
 
 
 touch
