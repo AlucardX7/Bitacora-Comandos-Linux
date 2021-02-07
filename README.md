@@ -1011,22 +1011,23 @@ OPCIONES:
       		-exec COMMAND ; -exec COMMAND {} + -ok COMMAND ;
       		-execdir COMMAND ; -execdir COMMAND {} + -okdir COMMAND ;
 
+		Valid arguments for -D:
+		exec, opt, rates, search, stat, time, tree, all, help
+
 EJEMPLOS:
 
-Valid arguments for -D:
-exec, opt, rates, search, stat, time, tree, all, help
 
 user@computername:~$find archivo7.txt
 
-archivo7.txt
+	archivo7.txt
 
 user@computername:~$find --version
 
-find (GNU findutils) 4.7.0
-Copyright (C) 2019 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later.
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
+	find (GNU findutils) 4.7.0
+	Copyright (C) 2019 Free Software Foundation, Inc.
+	License GPLv3+: GNU GPL version 3 or later.
+	This is free software: you are free to change and redistribute it.
+	There is NO WARRANTY, to the extent permitted by law.
 
 htop
 ====
