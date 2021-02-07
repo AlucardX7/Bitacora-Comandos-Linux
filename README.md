@@ -155,19 +155,19 @@ OPCIONES:
 
 EJEMPLOS:
 
-apt show firefox
+user@computername:~$apt show firefox
 
-Package: firefox
-Version: 85.0+build1-0ubuntu0.20.04.1
-Priority: optional
-Section: web
-Origin: Ubuntu
+	Package: firefox
+	Version: 85.0+build1-0ubuntu0.20.04.1
+	Priority: optional
+	Section: web
+	Origin: Ubuntu
 
-apt list thunderbird
+user@computername:~$apt list thunderbird
 
-Listando... Hecho
-thunderbird/focal-updates,focal-security,now 1:68.10.0+build1-0ubuntu0.20.04.1 amd64 [instalado]
-N: Hay 1 versión adicional. Utilice la opción «-a» para verla
+	Listando... Hecho
+	thunderbird/focal-updates,focal-security,now 1:68.10.0+build1-0ubuntu0.20.04.1 amd64 [instalado]
+	N: Hay 1 versión adicional. Utilice la opción «-a» para verla
 
 
 
