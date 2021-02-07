@@ -801,34 +801,34 @@ Despliega el arbol de procesos.
 
 OPCIONES:
 
-  -a, --arguments     show command line arguments
-  -A, --ascii         use ASCII line drawing characters
-  -c, --compact-not   don't compact identical subtrees
-  -C, --color=TYPE    color process by attribute
+  	-a, --arguments     show command line arguments
+  	-A, --ascii         use ASCII line drawing characters
+  	-c, --compact-not   don't compact identical subtrees
+  	-C, --color=TYPE    color process by attribute
                       (age)
-  -g, --show-pgids    show process group ids; implies -c
-  -G, --vt100         use VT100 line drawing characters
-  -h, --highlight-all highlight current process and its ancestors
-  -H PID, --highlight-pid=PID
+  	-g, --show-pgids    show process group ids; implies -c
+  	-G, --vt100         use VT100 line drawing characters
+  	-h, --highlight-all highlight current process and its ancestors
+  	-H PID, --highlight-pid=PID
                       highlight this process and its ancestors
-  -l, --long          don't truncate long lines
-  -n, --numeric-sort  sort output by PID
-  -N TYPE, --ns-sort=TYPE
+  	-l, --long          don't truncate long lines
+  	-n, --numeric-sort  sort output by PID
+  	-N TYPE, --ns-sort=TYPE
                       sort output by this namespace type
                               (cgroup, ipc, mnt, net, pid, user, uts)
-  -p, --show-pids     show PIDs; implies -c
-  -s, --show-parents  show parents of the selected process
-  -S, --ns-changes    show namespace transitions
-  -t, --thread-names  show full thread names
-  -T, --hide-threads  hide threads, show only processes
-  -u, --uid-changes   show uid transitions
-  -U, --unicode       use UTF-8 (Unicode) line drawing characters
-  -V, --version       display version information
-  -Z, --security-context
+  	-p, --show-pids     show PIDs; implies -c
+  	-s, --show-parents  show parents of the selected process
+  	-S, --ns-changes    show namespace transitions
+  	-t, --thread-names  show full thread names
+  	-T, --hide-threads  hide threads, show only processes
+  	-u, --uid-changes   show uid transitions
+  	-U, --unicode       use UTF-8 (Unicode) line drawing characters
+  	-V, --version       display version information
+  	-Z, --security-context
                       muestra los contextos de seguridad SELinux
 
-  PID    start at this PID; default is 1 (init)
-  USER   show only trees rooted at processes of this user
+  	PID    start at this PID; default is 1 (init)
+  	USER   show only trees rooted at processes of this user
 
 
 EJEMPLOS:
