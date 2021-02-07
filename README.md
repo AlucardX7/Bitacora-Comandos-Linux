@@ -201,16 +201,12 @@ Priority: optional
 Section: web
 Origin: Ubuntu
 
-sudo apt update
+apt list thunderbird
 
-Obj:1 http://security.ubuntu.com/ubuntu focal-security InRelease
-Obj:2 http://cr.archive.ubuntu.com/ubuntu focal InRelease
-Obj:3 http://cr.archive.ubuntu.com/ubuntu focal-updates InRelease
-Obj:4 http://cr.archive.ubuntu.com/ubuntu focal-backports InRelease
-Leyendo lista de paquetes... Hecho
-Creando árbol de dependencias       
-Leyendo la información de estado... Hecho
-Todos los paquetes están actualizados.
+Listando... Hecho
+thunderbird/focal-updates,focal-security,now 1:68.10.0+build1-0ubuntu0.20.04.1 amd64 [instalado]
+N: Hay 1 versión adicional. Utilice la opción «-a» para verla
+
 
 
 lsb_release 
