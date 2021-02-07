@@ -209,11 +209,11 @@ OPCIONES:
 
 EJEMPLOS:
 
-lsb_release -d
+user@computername:~$lsb_release -d
 
 Description:	Ubuntu 20.04.2 LTS
 
-lsb_release -a
+user@computername:~$lsb_release -a
 
 No LSB modules are available.
 Distributor ID:	Ubuntu
@@ -379,11 +379,11 @@ OPCIONES:
 
 EJEMPLOS:
 
-ls
+user@computername:~$ls
 
 Descargas  Documentos  Escritorio  Imágenes  Música  Plantillas  Público  snap  Vídeos
 
-ls 
+user@computername:~/Descargas$ls 
 
 Descargas/
 250d3f5f571b8aeb3a8fa9b42be116925faa83db.jpeg
@@ -414,11 +414,11 @@ OPCIONES:
 
 EJEMPLOS:
 
-pwd
+user@computername:~$pwd
 
 /home/user
 
-pwd
+user@computername:~/Documentos$pwd
 
 /home/user/Documentos
 
@@ -450,9 +450,9 @@ OPCIONES:
 
 EJEMPLOS:
 
-mkdir test
+user@computername:~$mkdir test
 
-mkdir test2 -p
+user@computername:~$mkdir test2 -p
 
 
 cd
@@ -557,6 +557,638 @@ Muestra los contenidos de f, luego la entrada estándar,
 Copia la entrada estándar en la salida estándar.
 
 
+uname
+=====
+
+Muestra cierta informacion del sistema
+
+OPCIONES:
+
+	-a, --all            muestra toda la información, en el siguiente orden,
+                         excepto que se omite -p y -i si son desconocidos:
+  	-s, --kernel-name    muestra el nombre del núcleo
+  	-n, --nodename       muestra el nombre de `host' del nodo de red
+  	-r, --kernel-release muestra la versión del núcleo
+  	-v, --kernel-version     print the kernel version
+  	-m, --machine            print the machine hardware name
+  	-p, --processor          print the processor type (non-portable)
+  	-i, --hardware-platform  print the hardware platform (non-portable)
+  	-o, --operating-system   print the operating system
+      	--help     muestra esta ayuda y finaliza
+      	--version  informa de la versión y finaliza
 
 
+EJEMPLOS:
+
+user@computername:~$uname --s
+Linux
+
+user@computername:~$uname -a
+Linux ubuntu-ulacit 5.8.0-41-generic #46~20.04.1-Ubuntu SMP Mon Jan 18 17:52:23 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+
+top
+===
+
+El programa top proporciona una vision dinamica en tiempo real de un sistema corriendo. Puede mostrar resumen del sistema asi como listar procesos or hilos actualmente manejados por el Linux kernel.
+
+
+OPCIONES:
+
+
+he command-line syntax for top consists of:
+
+       -hv|-bcEHiOSs1 -d secs -n max -u|U user -p pid -o fld -w [cols]
+
+       The typically mandatory switch (`-') and even whitespace are completely optional.
+
+       -h | -v  :Help/Version
+            Show library version and the usage prompt, then quit.
+
+       -b  :Batch-mode operation
+            Starts top in Batch mode, which could be useful for sending output from top to other programs or to a file.  In this mode, top will  not  accept  input
+            and runs until the iterations limit you've set with the `-n' command-line option or until killed.
+
+       -c  :Command-line/Program-name toggle
+            Starts  top  with  the last remembered `c' state reversed.  Thus, if top was displaying command lines, now that field will show program names, and vice
+            versa.  See the `c' interactive command for additional information.
+
+       -d  :Delay-time interval as:  -d ss.t (secs.tenths)
+            Specifies the delay between screen updates, and overrides the corresponding value in one's personal configuration file or the startup  default.   Later
+            this can be changed with the `d' or `s' interactive commands.
+
+            Fractional  seconds  are honored, but a negative number is not allowed.  In all cases, however, such changes are prohibited if top is running in Secure
+            mode, except for root (unless the `s' command-line option was used).  For additional information on Secure mode see topic 6d. SYSTEM Restrictions File.
+
+       -E  :Extend-Memory-Scaling as:  -E  k | m | g | t | p | e
+            Instructs top to force summary area memory to be scaled as:
+               k - kibibytes
+               m - mebibytes
+               g - gibibytes
+               t - tebibytes
+               p - pebibytes
+               e - exbibytes
+
+            Later this can be changed with the `E' command toggle.
+
+
+-H  :Threads-mode operation
+            Instructs top to display individual threads.  Without this command-line option a summation of all threads in each process is shown.  Later this can  be
+            changed with the `H' interactive command.
+
+       -i  :Idle-process toggle
+            Starts  top  with  the last remembered `i' state reversed.  When this toggle is Off, tasks that have not used any CPU since the last update will not be
+            displayed.  For additional information regarding this toggle see topic 4c. TASK AREA Commands, SIZE.
+
+       -n  :Number-of-iterations limit as:  -n number
+            Specifies the maximum number of iterations, or frames, top should produce before ending.
+
+       -o  :Override-sort-field as:  -o fieldname
+            Specifies the name of the field on which tasks will be sorted, independent of what is reflected in the configuration file.  You can prepend  a  `+'  or
+            `-'  to  the field name to also override the sort direction.  A leading `+' will force sorting high to low, whereas a `-' will ensure a low to high or‐
+            dering.
+
+            This option exists primarily to support automated/scripted batch mode operation.
+
+       -O  :Output-field-names
+            This option acts as a form of help for the above -o option.  It will cause top to print each of the available field names  on  a  separate  line,  then
+            quit.  Such names are subject to NLS (National Language Support) translation.
+
+       -p  :Monitor-PIDs mode as:  -pN1 -pN2 ...  or  -pN1,N2,N3 ...
+            Monitor  only  processes  with specified process IDs.  This option can be given up to 20 times, or you can provide a comma delimited list with up to 20
+            pids.  Co-mingling both approaches is permitted.
+
+            A pid value of zero will be treated as the process id of the top program itself once it is running.
+
+            This is a command-line option only and should you wish to return to normal operation, it is not necessary to quit and restart top  --  just  issue  any
+            of these interactive commands: `=', `u' or `U'.
+
+            The `p', `u' and `U' command-line options are mutually exclusive.
+
+
+ -s  :Secure-mode operation
+            Starts top with secure mode forced, even for root.  This mode is far better controlled through a system configuration file (see topic 6. FILES).
+
+       -S  :Cumulative-time toggle
+            Starts top with the last remembered `S' state reversed.  When Cumulative time mode is On, each process is listed with the cpu time that it and its dead
+            children have used.  See the `S' interactive command for additional information regarding this mode.
+
+       -u | -U  :User-filter-mode as:  -u | -U number or name
+            Display only processes with a user id or user name matching that given.  The `-u' option matches on  effective user whereas the `-U' option matches  on
+            any user (real, effective, saved, or filesystem).
+
+            Prepending an exclamation point (`!') to the user id or name instructs top to display only processes with users not matching the one provided.
+
+            The `p', `u' and `U' command-line options are mutually exclusive.
+
+       -w  :Output-width-override as:  -w [ number ]
+            In Batch mode, when used without an argument top will format output using the COLUMNS= and LINES= environment variables, if set.  Otherwise, width will
+            be fixed at the maximum 512 columns.  With an argument, output width can be decreased or increased (up to 512) but the number of rows is considered un‐
+            limited.
+
+            In  normal  display  mode, when used without an argument top will attempt to format output using the COLUMNS= and LINES= environment variables, if set.
+            With an argument, output width can only be decreased, not increased.  Whether using environment variables or an argument with -w,  when  not  in  Batch
+            mode actual terminal dimensions can never be exceeded.
+
+            Note: Without the use of this command-line option, output width is always based on the terminal at which top was invoked whether or not in Batch mode.
+
+       -1  :Single/Separate-Cpu-States toggle
+            Starts  top with the last remembered Cpu States portion of the summary area reversed.  Either all cpu information will be displayed in a single line or
+            each cpu will be displayed separately, depending on the state of the NUMA Node command toggle ('2').
+
+
+
+EJEMPLOS:
+
+
+user@computername:~$top -i
+
+top - 13:17:56 up  2:24,  1 user,  load average: 0,00, 0,00, 0,00
+Tareas: 172 total,   1 ejecutar,  171 hibernar,    0 detener,    0 zombie
+%Cpu(s):  1,1 usuario,  1,8 sist,  0,0 adecuado, 96,7 inact,  0,0 en espera,  0,0 hardw int,  0,4 softw int,  0,0 robar tiempo
+MiB Mem :   3936,0 total,   1419,8 libre,    766,4 usado,   1749,8 búfer/caché
+MiB Intercambio:   2048,0 total,   2048,0 libre,      0,0 usado.   2873,0 dispon Mem 
+
+    PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU  %MEM     HORA+ ORDEN                                                                                            
+   1343 user  20   0  547328  77304  48888 S   4,0   1,9   0:38.13 Xorg                                                                                             
+   1533 user  20   0 3741596 349924 132976 S   2,7   8,7   0:47.97 gnome-shell                                                                                      
+   2029 user  20   0  825036  52160  40088 S   1,0   1,3   0:08.12 gnome-terminal-                                                                                  
+   1678 user  20   0  695788  29416  22260 S   0,3   0,7   0:00.20 gsd-media-keys                                                                                   
+   1681 user  20   0  353860  27676  21024 S   0,3   0,7   0:00.20 gsd-power                                                                                        
+   1826 user  20   0 1100320 199708  46904 S   0,3   5,0   0:05.88 snap-store
+
+
+user@computername:~$top -d 10
+
+
+op - 13:20:09 up  2:26,  1 user,  load average: 0,00, 0,00, 0,00
+Tareas: 172 total,   1 ejecutar,  171 hibernar,    0 detener,    0 zombie
+%Cpu(s):  0,1 usuario,  0,4 sist,  0,0 adecuado, 99,5 inact,  0,0 en espera,  0,0 hardw int,  0,0 softw int,  0,0 robar tiempo
+MiB Mem :   3936,0 total,   1419,8 libre,    766,6 usado,   1749,6 búfer/caché
+MiB Intercambio:   2048,0 total,   2048,0 libre,      0,0 usado.   2873,1 dispon Mem 
+
+    PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU  %MEM     HORA+ ORDEN                                                                                            
+    955 user    20   0 1491188  19416  15240 S   0,5   0,5   0:02.24 pulseaudio                                                                                       
+   1533 user    20   0 3741340 349600 132732 S   0,4   8,7   0:48.89 gnome-shell                                                                                      
+   1343 user    20   0  547072  77304  48888 S   0,2   1,9   0:39.02 Xorg        
+
+
+ps
+==
+
+Despliga una foto de los procesos actuales
+
+To see every process on the system using standard syntax:
+          ps -e
+          ps -ef
+          ps -eF
+          ps -ely
+
+       To see every process on the system using BSD syntax:
+          ps ax
+          ps axu
+
+       To print a process tree:
+          ps -ejH
+          ps axjf
+
+       To get info about threads:
+          ps -eLf
+          ps axms
+
+       To get security info:
+          ps -eo euser,ruser,suser,fuser,f,comm,label
+          ps axZ
+          ps -eM
+
+       To see every process running as root (real & effective ID) in user format:
+          ps -U root -u root u
+
+       To see every process with a user-defined format:
+          ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm
+          ps axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm
+          ps -Ao pid,tt,user,fname,tmout,f,wchan
+
+       Print only the process IDs of syslogd:
+          ps -C syslogd -o pid=
+
+       Print only the name of PID 42:
+          ps -q 42 -o comm=
+
+EJEMPLOS:
+
+user@computername:~$ps
+
+    PID TTY          TIME CMD
+   2064 pts/0    00:00:00 bash
+   4152 pts/0    00:00:00 ps
+
+user@computername:~$ps -aux
+
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.2 102100 11756 ?        Ss   10:53   0:02 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    10:53   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   10:53   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   10:53   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   10:53   0:00 [kworker/0:0H-kblockd]
+root           8  0.0  0.0      0     0 ?        I<   10:53   0:00 [mm_percpu_wq]
+root           9  0.0  0.0      0     0 ?        S    10:53   0:00 [ksoftirqd/0]
+root          10  0.0  0.0      0     0 ?        I    10:53   0:00 [rcu_sched]
+root          11  0.0  0.0      0     0 ?        S    10:53   0:00 [migration/0]
+root          12  0.0  0.0      0     0 ?        S    10:53   0:00 [idle_inject/0]
+
+pstree
+======
+
+Despliega el arbol de procesos.
+
+OPCIONES:
+
+  -a, --arguments     show command line arguments
+  -A, --ascii         use ASCII line drawing characters
+  -c, --compact-not   don't compact identical subtrees
+  -C, --color=TYPE    color process by attribute
+                      (age)
+  -g, --show-pgids    show process group ids; implies -c
+  -G, --vt100         use VT100 line drawing characters
+  -h, --highlight-all highlight current process and its ancestors
+  -H PID, --highlight-pid=PID
+                      highlight this process and its ancestors
+  -l, --long          don't truncate long lines
+  -n, --numeric-sort  sort output by PID
+  -N TYPE, --ns-sort=TYPE
+                      sort output by this namespace type
+                              (cgroup, ipc, mnt, net, pid, user, uts)
+  -p, --show-pids     show PIDs; implies -c
+  -s, --show-parents  show parents of the selected process
+  -S, --ns-changes    show namespace transitions
+  -t, --thread-names  show full thread names
+  -T, --hide-threads  hide threads, show only processes
+  -u, --uid-changes   show uid transitions
+  -U, --unicode       use UTF-8 (Unicode) line drawing characters
+  -V, --version       display version information
+  -Z, --security-context
+                      muestra los contextos de seguridad SELinux
+
+  PID    start at this PID; default is 1 (init)
+  USER   show only trees rooted at processes of this user
+
+
+EJEMPLOS:
+
+user@computername:~$pstree -a
+
+systemd splash
+  ├─ModemManager --filter-policy=strict
+  │   └─2*[{ModemManager}]
+  ├─NetworkManager --no-daemon
+  │   └─2*[{NetworkManager}]
+  ├─VBoxClient --clipboard
+  │   └─VBoxClient --clipboard
+  │       └─2*[{VBoxClient}]
+  ├─VBoxClient --seamless
+  │   └─VBoxClient --seamless
+
+
+user@computername:~$pstree -g
+
+systemd(1)─┬─ModemManager(572)─┬─{ModemManager}(572)
+           │                   └─{ModemManager}(572)
+           ├─NetworkManager(471)─┬─{NetworkManager}(471)
+           │                     └─{NetworkManager}(471)
+           ├─VBoxClient(1429)───VBoxClient(1429)─┬─{VBoxClient}(1429)
+           │                                     └─{VBoxClient}(1429)
+           ├─VBoxClient(1441)───VBoxClient(1441)─┬─{VBoxClient}(1441)
+           │                                     └─{VBoxClient}(1441)
+           ├─VBoxClient(1448)───VBoxClient(1448)─┬─{VBoxClient}(1448)
+           │                                     ├─{VBoxClient}(1448)
+           │                                     └─{VBoxClient}(1448)
+           ├─VBoxClient(1456)───VBoxClient(1456)─┬─{VBoxClient}(1456)
+           │                                     └─{VBoxClient}(1456)
+
+
+clear
+=====
+
+Limpia la terminal
+
+OPCIONES:
+
+-T TERM     use this instead of $TERM
+  -V          print curses-version
+  -x          do not try to clear scrollback
+
+EJEMPLOS:
+
+user@computername:~$clear -V
+
+ncurses 6.2.20200212
+
+user@computername:~$clear -x
+
+
+user@computername:~$
+
+
+history
+======
+
+Muestra o manipula la lista de la historia.
+
+OPCIONES:
+
+      -c	borra la lista de historia eliminando todas las entradas
+      -d despl	borra la entrada de la historia en la posición DESPL. Los
+    		desplazamientos negativos se cuentan hacia atrás desde el final de
+    		la lista de historia
+    
+      -a	agrega las líneas de historia de esta sesión al fichero de historia
+      -n	lee todas las líneas de historia que no se han leído del fichero
+    	de historia
+      -r	lee el fichero de historia y agrega el contenido al fichero
+    	de historia
+      -w	escribe la historia actual en el fichero de historia
+    
+      -p	hace expansión de historia en cada ARGumento y muestra el
+    	resultado, sin guardarlo en la lista de historia
+      -s	agrega los ARGumentos a la lista de historia como
+    	una sola entrada
+
+
+EJEMPLOS:
+
+user@computername:~$history
+
+    1  sudo apt install htop
+    2  pstree
+    3  sudo apt install terminator
+    4  terminator
+    5  htop
+
+user@computername:~$history -s
+
+user@computername:~$
+
+locate/mlocate
+===============
+
+Busca entradas en una mlocate base de datos. Tambien fuciona para buscar folders.
+
+Importate, cuando hay archivos nuevos locate no encontrara el archivo a menos que se actualize la base de datos con comando <updatedb>
+
+OPCIONES:
+
+A, --all              only print entries that match all patterns
+  -b, --basename         match only the base name of path names
+  -c, --count            only print number of found entries
+  -d, --database DBPATH  use DBPATH instead of default database (which is
+                         /var/lib/mlocate/mlocate.db)
+  -e, --existing         only print entries for currently existing files
+  -L, --follow           follow trailing symbolic links when checking file
+                         existence (default)
+  -h, --help             print this help
+  -i, --ignore-case      ignore case distinctions when matching patterns
+  -p, --ignore-spaces    ignore punctuation and spaces when matching patterns
+  -t, --transliterate    ignore accents using iconv transliteration when
+                         matching patterns
+  -l, --limit, -n LIMIT  limit output (or counting) to LIMIT entries
+  -m, --mmap             ignored, for backward compatibility
+  -P, --nofollow, -H     don't follow trailing symbolic links when checking file
+                         existence
+  -0, --null             separate entries with NUL on output
+  -S, --statistics       don't search for entries, print statistics about each
+                         used database
+  -q, --quiet            report no error messages about reading databases
+  -r, --regexp REGEXP    search for basic regexp REGEXP instead of patterns
+      --regex            patterns are extended regexps
+  -s, --stdio            ignored, for backward compatibility
+  -V, --version          print version information
+  -w, --wholename        match whole path name (default)
+
+
+EJEMPLOS:
+
+user@computername:~$locate archivo1.txt
+
+/home/user/Documentos/files/archivo1.txt
+
+user@computername:~$locate archivo20.txt
+
+/home/user/Documentos/files/archivo20.txt
+
+user@computername:~$locate oficina
+
+/home/user/Documentos/oficina
+
+
+find
+====
+
+Buscar archivos en la herarquia de un directorio
+
+
+OPCIONES:
+
+operadores (prioridad decreciente; se supone -and si no hay otros):
+      ( EXPR ) ! EXPR -not EXPR EXPR1 -a EXPR2 EXPR1 -and EXPR2
+      EXPR1 -o EXPR2 EXPR1 -or EXPR2 EXPR1 , EXPR2
+opciones de posición (siempre verdaderas): -daystart -follow -regextype
+
+opciones normales (siempre verdaderas, se ponen después de otras expresiones):
+      -depth --help -maxdepth NIVELES -mindepth NIVELES -mount -noleaf
+      --version -xdev -ignore_readdir_race -noignore_readdir_race
+evaluaciones (N puede ser +N, -N o N): -amin N -anewer FICHERO -atime N
+      -cmin N -cnewer ARCHIVO -ctime N -empty -false -fstype TIPO -gid N
+      -group NOMBRE -ilname EXPR-REG -iname EXPR-REG -inum N
+      -iwholename EXPR-REG -iregex EXPR-REG -links N -lname EXPR-REG
+      -mmin N -mtime N -name EXPR-REG -newer ARCHIVO
+      -nouser -nogroup -path PATTERN -perm [-/]MODE -regex PATTERN
+      -readable -writable -executable
+      -wholename PATTERN -size N[bcwkMG] -true -type [bcdpflsD] -uid N
+      -used N -user NAME -xtype [bcdpfls]      -context CONTEXTO
+
+actions: -delete -print0 -printf FORMAT -fprintf FILE FORMAT -print 
+      -fprint0 FILE -fprint FILE -ls -fls FILE -prune -quit
+      -exec COMMAND ; -exec COMMAND {} + -ok COMMAND ;
+      -execdir COMMAND ; -execdir COMMAND {} + -okdir COMMAND ;
+
+EJEMPLOS:
+
+Valid arguments for -D:
+exec, opt, rates, search, stat, time, tree, all, help
+
+user@computername:~$find archivo7.txt
+
+archivo7.txt
+
+user@computername:~$find --version
+
+find (GNU findutils) 4.7.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+htop
+====
+
+Aplicacion que muestra los procesos interactivamente
+
+OPCIONES:
+
+-C --no-color               Use a monochrome color scheme
+-d --delay=DELAY            Set the delay between updates, in tenths of seconds
+-h --help                   Print this help screen
+-s --sort-key=COLUMN        Sort by COLUMN (try --sort-key=help for a list)
+-t --tree                   Show the tree view by default
+-u --user=USERNAME          Show only processes of a given user
+-p --pid=PID,[,PID,PID...]  Show only the given PIDs
+-v --version                Print version info
+
+EJEMPLO:
+
+
+user@computername:~$htop -v
+
+htop 2.2.0 - (C) 2004-2019 Hisham Muhammad
+Released under the GNU GPL.
+
+
+vi
+===
+
+Editor de texto
+
+OPCIONES:
+
+--			Only file names after this
+   -v			Vi mode (like "vi")
+   -e			Ex mode (like "ex")
+   -E			Improved Ex mode
+   -s			Silent (batch) mode (only for "ex")
+   -y			Easy mode (like "evim", modeless)
+   -R			Readonly mode (like "view")
+   -Z			Restricted mode (like "rvim")
+   -m			Modifications (writing files) not allowed
+   -M			Modifications in text not allowed
+   -b			Binary mode
+   -C			Compatible with Vi: 'compatible'
+   -N			Not fully Vi compatible: 'nocompatible'
+   -V[N][fname]		Be verbose [level N] [log messages to fname]
+   -n			No swap file, use memory only
+   -r			List swap files and exit
+   -r (with file name)	Recover crashed session
+   -L			Same as -r
+   -T <terminal>	Set terminal type to <terminal>
+   --not-a-term		Skip warning for input/output not being a terminal
+   --ttyfail		Exit if input or output is not a terminal
+   -u <vimrc>		Use <vimrc> instead of any .vimrc
+   --noplugin		Don't load plugin scripts
+   -p[N]		Open N tab pages (default: one for each file)
+   -o[N]		Open N windows (default: one for each file)
+   -O[N]		Like -o but split vertically
+   +			Start at end of file
+   +<lnum>		Start at line <lnum>
+   --cmd <command>	Execute <command> before loading any vimrc file
+   -c <command>		Execute <command> after loading the first file
+   -S <session>		Source file <session> after loading the first file
+   -s <scriptin>	Read Normal mode commands from file <scriptin>
+   -w <scriptout>	Append all typed commands to file <scriptout>
+   -W <scriptout>	Write all typed commands to file <scriptout>
+   --clean		'nocompatible', Vim defaults, no plugins, no viminfo
+   -h  or  --help	Print Help (this message) and exit
+   --version		Print version information and exit
+
+
+EJEMPLO:
+
+user@computername:~$vi -h
+VIM - Vi IMproved 8.1 (2018 May 18, compiled Apr 15 2020 06:40:31)
+
+Usage: vim [arguments] [file ..]       edit specified file(s)
+   or: vim [arguments] -               read text from stdin
+   or: vim [arguments] -t tag          edit file where tag is defined
+
+
+nano
+====
+
+Editor de texto
+
+OPCIONES:
+
+
+Opción         Opción larga            Significado
+ -A             --smarthome             Habilitar una tecla de inicio inteligente
+ -B             --backup                Guardar respaldo de los ficheros existentes
+ -C <dir>       --backupdir=<dir>       Directorio donde guardar ficheros de respaldo
+ -D             --boldtext              Usar negrita en lugar de texto inverso
+ -E             --tabstospaces          Convertir tabulaciones a espacios al escribir
+ -F             --multibuffer           Leer fichero dejándolo en un buffer diferente como comportamiento predefinido
+ -G             --locking               Usar ficheros de bloqueo (estilo vim)
+ -H             --historylog            Registrar y leer histórico de cadenas de búsqueda/reemplazo
+ -I             --ignorercfiles         No leer los ficheros nanorc
+ -J <número>    --guidestripe=<número>  Mostrar una barra de guía en esta columna
+ -K             --rawsequences          Arreglar el problema de confusión del teclado numérico
+ -L             --nonewlines            No añadir nueva línea automática
+ -M             --trimblanks            Eliminar espacios finales cuando se aplique ajuste estricto
+ -N             --noconvert             No convertir los ficheros desde el formato DOS/Mac
+ -P             --positionlog           Guardar y restaurar la posición del cursor
+ -Q <regex>     --quotestr=<regex>      Expresión regular para coincidir con cita
+ -R             --restricted            Restringir acceso al sistema de ficheros
+ -T <número>    --tabsize=<número>      Fijar el ancho de tab a <número> columnas
+ -U             --quickblank            Limpiar la barra de estado con la siguiente tecla pulsada
+ -V             --version               Mostrar información sobre la versión y salir
+ -W             --wordbounds            Detectar límite entre palabras con más exactitud
+ -X <cadena>    --wordchars=<cadena>    Qué otros caracteres son partes de palabra
+ -Y <nombre>    --syntax=<nombre>       Definición de sintaxis a usar para coloreado
+ -Z             --zap                   Permitir que Bsp y Del borren una región demarcada
+ -a             --atblanks              Al hacer ajuste de línea suave, hacerlo en espacio en blanco
+ -b             --breaklonglines        Ajuste estricto automático de líneas largas
+ -c             --constantshow          Mostrar constantemente la posición del cursor
+ -d             --rebinddelete          Arreglar el problema de confusión Retroceso/Suprimir
+ -e             --emptyline             Mantener vacía la línea bajo la barra de título
+ -f <fichero>   --rcfile=<fichero>      Utilizar solo este fichero para configurar nano
+ -g             --showcursor            Mostrar cursor en el navegador de ficheros y en el texto de ayuda
+ -h             --help                  Mostrar este texto de ayuda y salir
+ -i             --autoindent            Sangrar automáticamente nuevas líneas
+ -j             --jumpyscrolling        Desplazamiento por medias pantallas, no por línea
+ -k             --cutfromcursor         Cortar desde el cursor al final de línea
+ -l             --linenumbers           Mostrar los números de línea delante del texto
+ -m             --mouse                 Habilitar el uso del ratón
+ -n             --noread                No leer el fichero (sólo escribirlo)
+ -o <dir>       --operatingdir=<dir>    Establecer el directorio de operación
+ -p             --preserve              Conservar teclas XON (^Q) y XOFF (^S)
+ -r <número>    --fill=<número>         Establecer anchura para ajuste estricto y justificación
+ -s <programa>  --speller=<programa>    Habilitar un corrector ortográfico alternativo
+ -t             --tempfile              Guardar automáticamente al salir, sin preguntar
+ -u             --unix                  Guardar fichero en formato Unix por omisión
+ -v             --view                  Modo de visualización (sólo lectura)
+ -w             --nowrap                No ajustar rígidamente líneas largas [comportamiento predefinido]
+ -x             --nohelp                No mostrar las dos líneas de ayuda
+ -y             --afterends             Configurar Ctrl+derecha para que se detenga al final de las palabras
+ -z             --suspend               Habilitar suspensión
+ -$             --softwrap              Habilitar ajuste de línea suave
+
+
+
+user@computername:~$nano -V
+
+
+ GNU nano, versión 4.8
+ (C) 1999-2011, 2013-2020 Free Software Foundation, Inc.
+ (C) 2014-2020 los colaboradores de nano
+ Correo: nano@nano-editor.org	Web: https://nano-editor.org/
+ Opciones compiladas: --disable-libmagic --enable-utf8
+
+
+user@computername:~$nano -h
+
+nano -h
+Modo de empleo: nano [OPCIONES] [[+LÍNEA[,COLUMNA]] FICHERO]...
+
+Para situar el cursor en una determinada línea del fichero, indicar el
+número de línea con un '+' delante del nombre del fichero.  También puede
+ponerse el número de columna a continuación de una coma.
+Cuando el nombre de fichero es '-', nano lee datos de la entrada estándar.
 
