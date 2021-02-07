@@ -967,17 +967,17 @@ EJEMPLOS:
 
 user@computername:~$locate archivo1.txt
 
-/home/user/Documentos/files/archivo1.txt
+	/home/user/Documentos/files/archivo1.txt
 
 
 user@computername:~$locate archivo20.txt
 
-/home/user/Documentos/files/archivo20.txt
+	/home/user/Documentos/files/archivo20.txt
 
 
 user@computername:~$locate oficina
 
-/home/user/Documentos/oficina
+	/home/user/Documentos/oficina
 
 
 find
