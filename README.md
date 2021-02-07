@@ -700,34 +700,34 @@ EJEMPLOS:
 
 user@computername:~$top -i
 
-top - 13:17:56 up  2:24,  1 user,  load average: 0,00, 0,00, 0,00
-Tareas: 172 total,   1 ejecutar,  171 hibernar,    0 detener,    0 zombie
-%Cpu(s):  1,1 usuario,  1,8 sist,  0,0 adecuado, 96,7 inact,  0,0 en espera,  0,0 hardw int,  0,4 softw int,  0,0 robar tiempo
-MiB Mem :   3936,0 total,   1419,8 libre,    766,4 usado,   1749,8 búfer/caché
-MiB Intercambio:   2048,0 total,   2048,0 libre,      0,0 usado.   2873,0 dispon Mem 
+	top - 13:17:56 up  2:24,  1 user,  load average: 0,00, 0,00, 0,00
+	Tareas: 172 total,   1 ejecutar,  171 hibernar,    0 detener,    0 zombie
+	%Cpu(s):  1,1 usuario,  1,8 sist,  0,0 adecuado, 96,7 inact,  0,0 en espera,  0,0 hardw int,  0,4 softw int,  0,0 robar tiempo
+	MiB Mem :   3936,0 total,   1419,8 libre,    766,4 usado,   1749,8 búfer/caché
+	MiB Intercambio:   2048,0 total,   2048,0 libre,      0,0 usado.   2873,0 dispon Mem 
 
-    PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU  %MEM     HORA+ ORDEN                                                                                            
-    1343 user  20   0  547328  77304  48888 S   4,0   1,9   0:38.13 Xorg                                                                                             
-    1533 user  20   0 3741596 349924 132976 S   2,7   8,7   0:47.97 gnome-shell                                                                                      
-    2029 user  20   0  825036  52160  40088 S   1,0   1,3   0:08.12 gnome-terminal-                                                                                  
-    1678 user  20   0  695788  29416  22260 S   0,3   0,7   0:00.20 gsd-media-keys                                                                                   
-    1681 user  20   0  353860  27676  21024 S   0,3   0,7   0:00.20 gsd-power                                                                                        
-    1826 user  20   0 1100320 199708  46904 S   0,3   5,0   0:05.88 snap-store
+    	PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU  %MEM     HORA+ ORDEN                                                                                            
+    	1343 user  20   0  547328  77304  48888 S   4,0   1,9   0:38.13 Xorg                                                                                             
+    	1533 user  20   0 3741596 349924 132976 S   2,7   8,7   0:47.97 gnome-shell                                                                                      
+    	2029 user  20   0  825036  52160  40088 S   1,0   1,3   0:08.12 gnome-terminal-                                                                                  
+    	1678 user  20   0  695788  29416  22260 S   0,3   0,7   0:00.20 gsd-media-keys                                                                                   
+    	1681 user  20   0  353860  27676  21024 S   0,3   0,7   0:00.20 gsd-power                                                                                        
+    	1826 user  20   0 1100320 199708  46904 S   0,3   5,0   0:05.88 snap-store
 
 
 user@computername:~$top -d 10
 
 
-op - 13:20:09 up  2:26,  1 user,  load average: 0,00, 0,00, 0,00
-Tareas: 172 total,   1 ejecutar,  171 hibernar,    0 detener,    0 zombie
-%Cpu(s):  0,1 usuario,  0,4 sist,  0,0 adecuado, 99,5 inact,  0,0 en espera,  0,0 hardw int,  0,0 softw int,  0,0 robar tiempo
-MiB Mem :   3936,0 total,   1419,8 libre,    766,6 usado,   1749,6 búfer/caché
-MiB Intercambio:   2048,0 total,   2048,0 libre,      0,0 usado.   2873,1 dispon Mem 
+	op - 13:20:09 up  2:26,  1 user,  load average: 0,00, 0,00, 0,00
+		Tareas: 172 total,   1 ejecutar,  171 hibernar,    0 detener,    0 zombie
+	%Cpu(s):  0,1 usuario,  0,4 sist,  0,0 adecuado, 99,5 inact,  0,0 en espera,  0,0 hardw int,  0,0 softw int,  0,0 robar tiempo
+	MiB Mem :   3936,0 total,   1419,8 libre,    766,6 usado,   1749,6 búfer/caché
+	MiB Intercambio:   2048,0 total,   2048,0 libre,      0,0 usado.   2873,1 dispon Mem 
 
-    PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU  %MEM     HORA+ ORDEN                                                                                            
-    955 user    20   0 1491188  19416  15240 S   0,5   0,5   0:02.24 pulseaudio                                                                                       
-    1533 user    20   0 3741340 349600 132732 S   0,4   8,7   0:48.89 gnome-shell                                                                                      
-    1343 user    20   0  547072  77304  48888 S   0,2   1,9   0:39.02 Xorg        
+    	PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU  %MEM     HORA+ ORDEN                                                                                            
+    	955 user    20   0 1491188  19416  15240 S   0,5   0,5   0:02.24 pulseaudio                                                                                       
+    	1533 user    20   0 3741340 349600 132732 S   0,4   8,7   0:48.89 gnome-shell                                                                                      
+    	1343 user    20   0  547072  77304  48888 S   0,2   1,9   0:39.02 Xorg        
 
 
 ps
