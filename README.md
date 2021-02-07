@@ -4,6 +4,7 @@
 
 ip addr
 =======
+=======
 
 Muestra IPs, manipula el routing, dispositivos de red, intercaes y tuneles.
 
