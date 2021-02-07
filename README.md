@@ -549,12 +549,12 @@ EJEMPLOS:
 
    cat f - g 
 
-Muestra los contenidos de f, luego la entrada estándar,
+		Muestra los contenidos de f, luego la entrada estándar,
               luego los contenidos de g.
 
    cat       
 
-Copia la entrada estándar en la salida estándar.
+		Copia la entrada estándar en la salida estándar.
 
 
 uname
