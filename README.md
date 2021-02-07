@@ -912,7 +912,7 @@ OPCIONES:
     	una sola entrada
 
 
-EJEMPLOS:
+EJEMPLO:
 
 user@computername:~$history
 
@@ -922,9 +922,7 @@ user@computername:~$history
     4  terminator
     5  htop
 
-user@computername:~$history -s
 
-user@computername:~$
 
 locate/mlocate
 ===============
