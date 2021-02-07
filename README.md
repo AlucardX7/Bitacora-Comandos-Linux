@@ -1024,7 +1024,7 @@ user@computername:~$find --version
 
 find (GNU findutils) 4.7.0
 Copyright (C) 2019 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+License GPLv3+: GNU GPL version 3 or later.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 
