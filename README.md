@@ -718,7 +718,7 @@ user@computername:~$top -i
 user@computername:~$top -d 10
 
 
-	Top - 13:20:09 up  2:26,  1 user,  load average: 0,00, 0,00, 0,00
+	top - 13:20:09 up  2:26,  1 user,  load average: 0,00, 0,00, 0,00
 		Tareas: 172 total,   1 ejecutar,  171 hibernar,    0 detener,    0 zombie
 	%Cpu(s):  0,1 usuario,  0,4 sist,  0,0 adecuado, 99,5 inact,  0,0 en espera,  0,0 hardw int,  0,0 softw int,  0,0 robar tiempo
 	MiB Mem :   3936,0 total,   1419,8 libre,    766,6 usado,   1749,6 búfer/caché
