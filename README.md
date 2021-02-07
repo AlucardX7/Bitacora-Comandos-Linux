@@ -495,27 +495,27 @@ Tambien se puede utilizar para crear archivos.
 
 OPCIONES:
 
-  -a                     cambia solamente la fecha de acceso
-  -c, --no-create        no crea ningún fichero
-  -d, --date=CADENA      examina y utiliza CADENA en lugar de la fecha actual
-  -f                     (no tiene efecto)
-  -h, --no-dereference   afecta a cada enlace simbólico en lugar de a los
+  	-a                     cambia solamente la fecha de acceso
+  	-c, --no-create        no crea ningún fichero
+  	-d, --date=CADENA      examina y utiliza CADENA en lugar de la fecha actual
+  	-f                     (no tiene efecto)
+  	-h, --no-dereference   afecta a cada enlace simbólico en lugar de a los
                          ficheros referidos (solamente es útil en sistemas
                          que pueden cambiar el propietario de un enlace
                          simbólico)
-  -m                     cambia solamente la fecha de modificación
-  -r, --reference=FICHERO utiliza la fecha de este FICHERO en lugar de la fecha
+  	-m                     cambia solamente la fecha de modificación
+  	-r, --reference=FICHERO utiliza la fecha de este FICHERO en lugar de la fecha
                           actual
-  -t FECHA                utiliza [[SS]AA]MMDDhhmm[.ss] en lugar de la fecha
+	-t FECHA                utiliza [[SS]AA]MMDDhhmm[.ss] en lugar de la fecha
                           actual
-      --time=PALABRA      establece la fecha dada por PALABRA:
+        --time=PALABRA      establece la fecha dada por PALABRA:
                             PALABRA es access, atime o use: equivale a -a
                             PALABRA es modify o mtime: equivale a -m
-      --help     muestra esta ayuda y finaliza
-      --version  informa de la versión y finaliza
+        --help     muestra esta ayuda y finaliza
+        --version  informa de la versión y finaliza
 
-Tenga en cuenta que las opciones -d y -t aceptan formatos de
-hora-fecha distintos.
+	Tenga en cuenta que las opciones -d y -t aceptan formatos de
+	hora-fecha distintos.
 
 
 EJEMPLOS:
@@ -532,18 +532,18 @@ Concatena archivos e imprime en la salida estandar
 
 OPCIONES:
 
--A, --show-all           equivalent to -vET
-  -b, --number-nonblank    number nonempty output lines, overrides -n
-  -e                       equivalent to -vE
-  -E, --show-ends          display $ at end of each line
-  -n, --number             number all output lines
-  -s, --squeeze-blank      suppress repeated empty output lines
-  -t                       equivalente a -vT
-  -T, --show-tabs          muestra los caracteres de tabulación como ^I
-  -u                       (sin efecto)
-  -v, --show-nonprinting   utiliza la notación ^ y M-, salvo para LFD y TAB
-      --help     muestra esta ayuda y finaliza
-      --version  informa de la versión y finaliza
+  	-A, --show-all           equivalent to -vET
+  	-b, --number-nonblank    number nonempty output lines, overrides -n
+  	-e                       equivalent to -vE
+  	-E, --show-ends          display $ at end of each line
+  	-n, --number             number all output lines
+  	-s, --squeeze-blank      suppress repeated empty output lines
+  	-t                       equivalente a -vT
+  	-T, --show-tabs          muestra los caracteres de tabulación como ^I
+  	-u                       (sin efecto)
+  	-v, --show-nonprinting   utiliza la notación ^ y M-, salvo para LFD y TAB
+        --help     muestra esta ayuda y finaliza
+        --version  informa de la versión y finaliza
 
 EJEMPLOS:
 
