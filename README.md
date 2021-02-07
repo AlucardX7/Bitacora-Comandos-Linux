@@ -1170,25 +1170,25 @@ OPCIONES:
  		-z             --suspend               Habilitar suspensión
  		-$             --softwrap              Habilitar ajuste de línea suave
 
-
+EJEMPLOS:
 
 user@computername:~$nano -V
 
 
- GNU nano, versión 4.8
- (C) 1999-2011, 2013-2020 Free Software Foundation, Inc.
- (C) 2014-2020 los colaboradores de nano
- Correo: nano@nano-editor.org	Web: https://nano-editor.org/
- Opciones compiladas: --disable-libmagic --enable-utf8
+ 	GNU nano, versión 4.8
+ 	(C) 1999-2011, 2013-2020 Free Software Foundation, Inc.
+ 	(C) 2014-2020 los colaboradores de nano
+ 	Correo: nano@nano-editor.org	Web: https://nano-editor.org/
+ 	Opciones compiladas: --disable-libmagic --enable-utf8
 
 
 user@computername:~$nano -h
 
-nano -h
-Modo de empleo: nano [OPCIONES] [[+LÍNEA[,COLUMNA]] FICHERO]...
+	nano -h
+	Modo de empleo: nano [OPCIONES] [[+LÍNEA[,COLUMNA]] FICHERO]...
 
-Para situar el cursor en una determinada línea del fichero, indicar el
-número de línea con un '+' delante del nombre del fichero.  También puede
-ponerse el número de columna a continuación de una coma.
-Cuando el nombre de fichero es '-', nano lee datos de la entrada estándar.
+	Para situar el cursor en una determinada línea del fichero, indicar el
+	número de línea con un '+' delante del nombre del fichero.  También puede
+	ponerse el número de columna a continuación de una coma.
+	Cuando el nombre de fichero es '-', nano lee datos de la entrada estándar.
 
