@@ -970,17 +970,14 @@ user@computername:~$locate archivo1.txt
 /home/user/Documentos/files/archivo1.txt
 
 
-
 user@computername:~$locate archivo20.txt
 
 /home/user/Documentos/files/archivo20.txt
 
 
-
 user@computername:~$locate oficina
 
 /home/user/Documentos/oficina
-
 
 
 find
@@ -991,28 +988,28 @@ Buscar archivos en la herarquia de un directorio
 
 OPCIONES:
 
-operadores (prioridad decreciente; se supone -and si no hay otros):
-      ( EXPR ) ! EXPR -not EXPR EXPR1 -a EXPR2 EXPR1 -and EXPR2
-      EXPR1 -o EXPR2 EXPR1 -or EXPR2 EXPR1 , EXPR2
-opciones de posición (siempre verdaderas): -daystart -follow -regextype
+		operadores (prioridad decreciente; se supone -and si no hay otros):
+      		( EXPR ) ! EXPR -not EXPR EXPR1 -a EXPR2 EXPR1 -and EXPR2
+      		EXPR1 -o EXPR2 EXPR1 -or EXPR2 EXPR1 , EXPR2
+		opciones de posición (siempre verdaderas): -daystart -follow -regextype
 
-opciones normales (siempre verdaderas, se ponen después de otras expresiones):
-      -depth --help -maxdepth NIVELES -mindepth NIVELES -mount -noleaf
-      --version -xdev -ignore_readdir_race -noignore_readdir_race
-evaluaciones (N puede ser +N, -N o N): -amin N -anewer FICHERO -atime N
-      -cmin N -cnewer ARCHIVO -ctime N -empty -false -fstype TIPO -gid N
-      -group NOMBRE -ilname EXPR-REG -iname EXPR-REG -inum N
-      -iwholename EXPR-REG -iregex EXPR-REG -links N -lname EXPR-REG
-      -mmin N -mtime N -name EXPR-REG -newer ARCHIVO
-      -nouser -nogroup -path PATTERN -perm [-/]MODE -regex PATTERN
-      -readable -writable -executable
-      -wholename PATTERN -size N[bcwkMG] -true -type [bcdpflsD] -uid N
-      -used N -user NAME -xtype [bcdpfls]      -context CONTEXTO
+		opciones normales (siempre verdaderas, se ponen después de otras expresiones):
+      		-depth --help -maxdepth NIVELES -mindepth NIVELES -mount -noleaf
+      		--version -xdev -ignore_readdir_race -noignore_readdir_race
+		evaluaciones (N puede ser +N, -N o N): -amin N -anewer FICHERO -atime N
+      		-cmin N -cnewer ARCHIVO -ctime N -empty -false -fstype TIPO -gid N
+      		-group NOMBRE -ilname EXPR-REG -iname EXPR-REG -inum N
+      		-iwholename EXPR-REG -iregex EXPR-REG -links N -lname EXPR-REG
+      		-mmin N -mtime N -name EXPR-REG -newer ARCHIVO
+      		-nouser -nogroup -path PATTERN -perm [-/]MODE -regex PATTERN
+      		-readable -writable -executable
+      		-wholename PATTERN -size N[bcwkMG] -true -type [bcdpflsD] -uid N
+      		-used N -user NAME -xtype [bcdpfls]      -context CONTEXTO
 
-actions: -delete -print0 -printf FORMAT -fprintf FILE FORMAT -print 
-      -fprint0 FILE -fprint FILE -ls -fls FILE -prune -quit
-      -exec COMMAND ; -exec COMMAND {} + -ok COMMAND ;
-      -execdir COMMAND ; -execdir COMMAND {} + -okdir COMMAND ;
+		actions: -delete -print0 -printf FORMAT -fprintf FILE FORMAT -print 
+      		-fprint0 FILE -fprint FILE -ls -fls FILE -prune -quit
+      		-exec COMMAND ; -exec COMMAND {} + -ok COMMAND ;
+      		-execdir COMMAND ; -execdir COMMAND {} + -okdir COMMAND ;
 
 EJEMPLOS:
 
