@@ -248,6 +248,7 @@ OPCIONES:
 EJEMPLOS:
 
 lsb_release -d
+
 Description:	Ubuntu 20.04.2 LTS
 
 lsb_release -a
