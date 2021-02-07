@@ -278,100 +278,100 @@ Lista el contenido de un directorio
 
 OPCIONES:
 
-  -a, --all                  no oculta las entradas que comienzan con .
-  -A, --almost-all           no muestra las entradas . y .. implícitas
-      --author               con -l, imprime el autor de cada fichero
-  -b, --escape               imprime escapes en estilo C para los caracteres no
+  	-a, --all                  no oculta las entradas que comienzan con .
+  	-A, --almost-all           no muestra las entradas . y .. implícitas
+        --author               con -l, imprime el autor de cada fichero
+  	-b, --escape               imprime escapes en estilo C para los caracteres no
                              gráficos
-      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+        --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
                                e.g., '--block-size=M'; see SIZE format below
-  -B, --ignore-backups       do not list implied entries ending with ~
-  -c                         with -lt: sort by, and show, ctime (time of last
+	-B, --ignore-backups       do not list implied entries ending with ~
+	-c                         with -lt: sort by, and show, ctime (time of last
                                modification of file status information);
                                with -l: show ctime and sort by name;
                                otherwise: sort by ctime, newest first
-  -C                         list entries by columns
-      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+  	-C                         list entries by columns
+        --color[=WHEN]         colorize the output; WHEN can be 'always' (default
                                if omitted), 'auto', or 'never'; more info below
-  -d, --directory            list directories themselves, not their contents
-  -D, --dired                generate output designed for Emacs' dired mode
-  -f                         no ordena, utiliza -aU, no utiliza -ls --color
-  -F, --classify             añade un indicador (uno de */=@|) a las entradas
-      --file-type            similar, pero no añade '*'
-      --format=PALABRA       across -x, commas -m, horizontal -x, long -l,
+  	-d, --directory            list directories themselves, not their contents
+	-D, --dired                generate output designed for Emacs' dired mode
+        -f                         no ordena, utiliza -aU, no utiliza -ls --color
+        -F, --classify             añade un indicador (uno de */=@|) a las entradas
+        --file-type            similar, pero no añade '*'
+        --format=PALABRA       across -x, commas -m, horizontal -x, long -l,
                                single-column -1, verbose -l, vertical -C
-      --full-time            como -l --time-style=full-iso
-  -g                         como -l, pero no lista el propietario
-      --group-directories-first
+        --full-time            como -l --time-style=full-iso
+        -g                         como -l, pero no lista el propietario
+        --group-directories-first
                              agrupa directorios antes que los ficheros;
                                se puede añadir una opción --sort, pero cualquier
                                uso de --sort=none (-U) desactiva la agrupación
-  -G, --no-group             in a long listing, don't print group names
-  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
-      --si                   likewise, but use powers of 1000 not 1024
-  -H, --dereference-command-line
+        -G, --no-group             in a long listing, don't print group names
+        -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+        --si                   likewise, but use powers of 1000 not 1024
+        -H, --dereference-command-line
                              sigue los enlaces simbólicos en la línea de
                              órdenes
-      --dereference-command-line-symlink-to-dir
+        --dereference-command-line-symlink-to-dir
                              sigue cada enlace simbólico en la línea de
                                órdenes que apunte a un directorio
-      --hide=PATRÓN          no lista las entradas implícitas que coinciden
+        --hide=PATRÓN          no lista las entradas implícitas que coinciden
                                con el patrón de shell PATRÓN
                                (las opciones -a o -A tienen prioridad)
-      --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
+        --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
                                (default if omitted), 'auto', or 'never'
-      --indicator-style=WORD  append indicator with style WORD to entry names:
+        --indicator-style=WORD  append indicator with style WORD to entry names:
                                none (default), slash (-p),
                                file-type (--file-type), classify (-F)
-  -i, --inode                print the index number of each file
-  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
-  -k, --kibibytes            default to 1024-byte blocks for disk usage;
+        -i, --inode                print the index number of each file
+        -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  	-k, --kibibytes            default to 1024-byte blocks for disk usage;
                                used only with -s and per directory totals
-  -l                         utiliza un formato de listado largo
-  -L, --dereference          al mostrar la información de un fichero para un
+  	-l                         utiliza un formato de listado largo
+	-L, --dereference          al mostrar la información de un fichero para un
                                enlace simbólico, muestra la información del
                                fichero al que apunta el enlace en lugar de la
                                del propio enlace
-  -m                         rellena el ancho con una lista de entradas
+  	-m                         rellena el ancho con una lista de entradas
                              separadas por comas
-  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
-  -N, --literal              print entry names without quoting
-  -o                         like -l, but do not list group information
-  -p, --indicator-style=slash
+	-n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  	-N, --literal              print entry names without quoting
+  	-o                         like -l, but do not list group information
+  	-p, --indicator-style=slash
                              append / indicator to directories
-  -q, --hide-control-chars   print ? instead of nongraphic characters
-      --show-control-chars   show nongraphic characters as-is (the default,
+  	-q, --hide-control-chars   print ? instead of nongraphic characters
+        --show-control-chars   show nongraphic characters as-is (the default,
                                unless program is 'ls' and output is a terminal)
-  -Q, --quote-name           enclose entry names in double quotes
-      --quoting-style=WORD   use quoting style WORD for entry names:
+  	-Q, --quote-name           enclose entry names in double quotes
+        --quoting-style=WORD   use quoting style WORD for entry names:
                                literal, locale, shell, shell-always,
                                shell-escape, shell-escape-always, c, escape
                                (overrides QUOTING_STYLE environment variable)
-  -r, --reverse              invierte el orden, en su caso
-  -R, --recursive            muestra los subdirectorios recursivamente
-  -s, --size                 muestra el tamaño de cada fichero, en bloques
-  -S                         sort by file size, largest first
-      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+  	-r, --reverse              invierte el orden, en su caso
+  	-R, --recursive            muestra los subdirectorios recursivamente
+  	-s, --size                 muestra el tamaño de cada fichero, en bloques
+  	-S                         sort by file size, largest first
+        --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
                                time (-t), version (-v), extension (-X)
-      --time=WORD            with -l, show time as WORD instead of default
+        --time=WORD            with -l, show time as WORD instead of default
                                modification time: atime or access or use (-u);
                                ctime or status (-c); also use specified time
                                as sort key if --sort=time (newest first)
-      --time-style=TIME_STYLE  time/date format with -l; see TIME_STYLE below
-  -t                         ordena por la fecha de modificación, el más
+        --time-style=TIME_STYLE  time/date format with -l; see TIME_STYLE below
+  	-t                         ordena por la fecha de modificación, el más
                                reciente primero
-  -T, --tabsize=COLS         establece los topes de tabulación a cada COLS
+  	-T, --tabsize=COLS         establece los topes de tabulación a cada COLS
                              en lugar de 8
-  -u                         with -lt: sort by, and show, access time;
+  	-u                         with -lt: sort by, and show, access time;
                                with -l: show access time and sort by name;
                                otherwise: sort by access time, newest first
-  -U                         do not sort; list entries in directory order
-  -v                         natural sort of (version) numbers within text
-  -w, --width=COLS           set output width to COLS.  0 means no limit
-  -x                         list entries by lines instead of by columns
-  -X                         sort alphabetically by entry extension
-  -Z, --context              print any security context of each file
-  -1                         list one file per line.  Avoid '\n' with -q or -b
+  	-U                         do not sort; list entries in directory order
+  	-v                         natural sort of (version) numbers within text
+  	-w, --width=COLS           set output width to COLS.  0 means no limit
+  	-x                         list entries by lines instead of by columns
+  	-X                         sort alphabetically by entry extension
+  	-Z, --context              print any security context of each file
+  	-1                         list one file per line.  Avoid '\n' with -q or -b
       --help     muestra esta ayuda y finaliza
       --version  informa de la versión y finaliza
 
