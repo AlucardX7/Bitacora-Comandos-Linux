@@ -581,10 +581,10 @@ OPCIONES:
 EJEMPLOS:
 
 user@computername:~$uname --s
-Linux
+	Linux
 
 user@computername:~$uname -a
-Linux ubuntu-ulacit 5.8.0-41-generic #46~20.04.1-Ubuntu SMP Mon Jan 18 17:52:23 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+	Linux ubuntu-ulacit 5.8.0-41-generic #46~20.04.1-Ubuntu SMP Mon Jan 18 17:52:23 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
 
 
 top
