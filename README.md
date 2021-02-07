@@ -1102,11 +1102,12 @@ OPCIONES:
 EJEMPLO:
 
 user@computername:~$vi -h
-VIM - Vi IMproved 8.1 (2018 May 18, compiled Apr 15 2020 06:40:31)
 
-Usage: vim [arguments] [file ..]       edit specified file(s)
-   or: vim [arguments] -               read text from stdin
-   or: vim [arguments] -t tag          edit file where tag is defined
+	VIM - Vi IMproved 8.1 (2018 May 18, compiled Apr 15 2020 06:40:31)
+
+	Usage: vim [arguments] [file ..]       edit specified file(s)
+   	or: vim [arguments] -               read text from stdin
+   	or: vim [arguments] -t tag          edit file where tag is defined
 
 
 nano
