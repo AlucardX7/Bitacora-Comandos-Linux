@@ -1049,8 +1049,8 @@ EJEMPLO:
 
 user@computername:~$htop -v
 
-htop 2.2.0 - (C) 2004-2019 Hisham Muhammad
-Released under the GNU GPL.
+	htop 2.2.0 - (C) 2004-2019 Hisham Muhammad
+	Released under the GNU GPL.
 
 
 vi
