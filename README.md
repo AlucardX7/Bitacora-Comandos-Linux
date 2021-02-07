@@ -211,15 +211,15 @@ EJEMPLOS:
 
 user@computername:~$lsb_release -d
 
-Description:	Ubuntu 20.04.2 LTS
+	Description:	Ubuntu 20.04.2 LTS
 
 user@computername:~$lsb_release -a
 
-No LSB modules are available.
-Distributor ID:	Ubuntu
-Description:	Ubuntu 20.04.2 LTS
-Release:	20.04
-Codename:	focal
+	No LSB modules are available.
+	Distributor ID:	Ubuntu
+	Description:	Ubuntu 20.04.2 LTS
+	Release:	20.04
+	Codename:	focal
 
 
 sudo
