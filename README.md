@@ -139,56 +139,18 @@ apt es una interface para el manejo del sistema de paquetes. Esta diseñada para
 OPCIONES:
 
 
-       update (apt-get(8))
-           update is used to download package information from all configured sources. Other commands operate on this data to e.g. perform package upgrades or search in and display details about
-           all packages available for installation.
-
-       upgrade (apt-get(8))
-           upgrade is used to install available upgrades of all packages currently installed on the system from the sources configured via sources.list(5). New packages will be installed if
-           required to satisfy dependencies, but existing packages will never be removed. If an upgrade for a package requires the removal of an installed package the upgrade for this package isn't
-           performed.
-
-       full-upgrade (apt-get(8))
-           full-upgrade performs the function of upgrade but will remove currently installed packages if this is needed to upgrade the system as a whole.
-
-       install, reinstall, remove, purge (apt-get(8))
-           Performs the requested action on one or more packages specified via regex(7), glob(7) or exact match. The requested action can be overridden for specific packages by appending a plus (+)
-           to the package name to install this package or a minus (-) to remove it.
-
-           A specific version of a package can be selected for installation by following the package name with an equals (=) and the version of the package to select. Alternatively the version from
-           a specific release can be selected by following the package name with a forward slash (/) and codename (buster, bullseye, sid ...) or suite name (stable, testing, unstable). This will
-           also select versions from this release for dependencies of this package if needed to satisfy the request.
-
-           Removing a package removes all packaged data, but leaves usually small (modified) user configuration files behind, in case the remove was an accident. Just issuing an installation
-           request for the accidentally removed package will restore its function as before in that case. On the other hand you can get rid of these leftovers by calling purge even on already
-           removed packages. Note that this does not affect any data or configuration stored in your home directory.
-
-       autoremove (apt-get(8))
-           autoremove is used to remove packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed as dependencies changed or the package(s)
-           needing them were removed in the meantime.
-
-           You should check that the list does not include applications you have grown to like even though they were once installed just as a dependency of another package. You can mark such a
-           package as manually installed by using apt-mark(8). Packages which you have installed explicitly via install are also never proposed for automatic removal.
-
-       satisfy (apt-get(8))
-           satisfy satisfies dependency strings, as used in Build-Depends. It also handles conflicts, by prefixing an argument with "Conflicts: ".
-
-           Example: apt satisfy "foo, bar (>= 1.0)" "Conflicts: baz, fuzz"
-
-       search (apt-cache(8))
-           search can be used to search for the given regex(7) term(s) in the list of available packages and display matches. This can e.g. be useful if you are looking for packages having a
-           specific feature. If you are looking for a package including a specific file try apt-file(1).
-
-       show (apt-cache(8))
-           Show information about the given package(s) including its dependencies, installation and download size, sources the package is available from, the description of the packages content and
-           much more. It can e.g. be helpful to look at this information before allowing apt(8) to remove a package or while searching for new packages to install.
-
-       list
-           list is somewhat similar to dpkg-query --list in that it can display a list of packages satisfying certain criteria. It supports glob(7) patterns for matching package names as well as
-           options to list installed (--installed), upgradeable (--upgradeable) or all available (--all-versions) versions.
-
-       edit-sources (work-in-progress)
-           edit-sources lets you edit your sources.list(5) files in your preferred text editor while also providing basic sanity checks.man apt
+       list - lista los paquetes según los nombres
+       search - busca en las descripciones de los paquetes
+       show - muestra detalles del paquete
+       install - instala paquetes
+       reinstall - reinstalar paquetes
+       remove - elimina paquetes
+       autoremove - Elimina automáticamente todos los paquetes sin utilizar
+       update - actualiza la lista de paquetes disponibles
+       upgrade - actualiza el sistema instalando/actualizando paquetes
+       full-upgrade - actualiza el sistema eliminando/instalando/actualizando paquetes
+       edit-sources - edita el fichero de información de fuentes
+       satisfy - satisfacer cadenas de dependencias
 
 
 EJEMPLOS:
@@ -267,177 +229,35 @@ Sudo permite a otro usuario ejecutar un comando como super usuario o como otro u
 
 OPCIONES:
 
-     -A, --askpass
-                 Normally, if sudo requires a password, it will read it from the user's terminal.  If the -A (askpass) option is specified, a (possibly graphical)
-                 helper program is executed to read the user's password and output the password to the standard output.  If the SUDO_ASKPASS environment variable
-                 is set, it specifies the path to the helper program.  Otherwise, if sudo.conf(5) contains a line specifying the askpass program, that value will
-                 be used.  For example:
+   -A, --askpass                 utilizar un programa auxiliar para la solicitud de contraseña
+  -b, --background              ejecutar comando en segundo plano
+  -B, --bell                    ring bell when prompting
+  -C, --close-from=num          cerrar todos los descriptores de archivo >= num
+  -E, --preserve-env            conservar entorno del usuario al ejecutar el comando
+      --preserve-env=list       conservar las variables de entorno específicas
+  -e, --edit                    editar archivos en lugar de ejecutar un comando
+  -g, --group=group             ejecutar comandos según el nombre o ID de grupo especificado
+  -H, --set-home                asignar la variable HOME al directorio de inicio del usuario
+  -h, --help                    mostrar mensaje de ayuda y salir
+  -h, --host=host               ejecutar comando en host (si lo admite el complemento)
+  -i, --login                   ejecutar consola de sesión como usuario de destino; también se puede especificar un comando
+  -K, --remove-timestamp        eliminar archivo de marca de tiempo por completo
+  -k, --reset-timestamp         invalidar archivo de marca de tiempo
+  -l, --list                    enumerar privilegios del usuario o comprobar un comando específico; utilizar dos veces para un formato más largo
+  -n, --non-interactive         modo no interactivo, no se utiliza ninguna solicitud
+  -P, --preserve-groups         conservar vector de grupos en vez de establecer de objetivo
+  -p, --prompt=prompt           utilizar la solicitud de contraseña especificada
+  -r, --role=role               crear contexto de seguridad SELinux con el rol especificado
+  -S, --stdin                   leer contraseña de entrada estándar
+  -s, --shell                   ejecutar consola como el usuario de destino; también se puede especificar un comando
+  -t, --type=type               crear contexto de seguridad SELinux con el tipo especificado
+  -T, --command-timeout=timeout orden de finalizar después del tiempo límite especificado
+  -U, --other-user=user         en modo de lista, mostrar privilegios del usuario
+  -u, --user=user               ejecutar comando (o editar archivo) como el nombre o ID de usuario especificado
+  -V, --version                 mostrar información de la versión y salir
+  -v, --validate                actualizar marca de tiempo del usuario sin ejecutar un comando
+  --                            detener procesamiento de argumentos de línea de comando
 
-                     # Path to askpass helper program
-                     Path askpass /usr/X11R6/bin/ssh-askpass
-
-                 If no askpass program is available, sudo will exit with an error.
-
-     -B, --bell  Ring the bell as part of the password promp when a terminal is present.  This option has no effect if an askpass program is used.
-
-     -b, --background
-                 Run the given command in the background.  Note that it is not possible to use shell job control to manipulate background processes started by
-                 sudo.  Most interactive commands will fail to work properly in background mode.
-
-     -C num, --close-from=num
-                 Close all file descriptors greater than or equal to num before executing a command.  Values less than three are not permitted.  By default, sudo
-                 will close all open file descriptors other than standard input, standard output and standard error when executing a command.  The security policy
-                 may restrict the user's ability to use this option.  The sudoers policy only permits use of the -C option when the administrator has enabled the
-                 closefrom_override option.
-
-     -E, --preserve-env
-                 Indicates to the security policy that the user wishes to preserve their existing environment variables.  The security policy may return an error
-                 if the user does not have permission to preserve the environment.
-
-     --preserve-env=list
-                 Indicates to the security policy that the user wishes to add the comma-separated list of environment variables to those preserved from the user's
-                 environment.  The security policy may return an error if the user does not have permission to preserve the environment.
-
-     -e, --edit  Edit one or more files instead of running a command.  In lieu of a path name, the string "sudoedit" is used when consulting the security policy.
-                 If the user is authorized by the policy, the following steps are taken:
-
-                 1.   Temporary copies are made of the files to be edited with the owner set to the invoking user.
-
-                 2.   The editor specified by the policy is run to edit the temporary files.  The sudoers policy uses the SUDO_EDITOR, VISUAL and EDITOR environ‐
-                      ment variables (in that order).  If none of SUDO_EDITOR, VISUAL or EDITOR are set, the first program listed in the editor sudoers(5) option
-                      is used.
-
-                 3.   If they have been modified, the temporary files are copied back to their original location and the temporary versions are removed.
-
-                 To help prevent the editing of unauthorized files, the following restrictions are enforced unless explicitly allowed by the security policy:
-
-                 •  Symbolic links may not be edited (version 1.8.15 and higher).
-
-                 •  Symbolic links along the path to be edited are not followed when the parent directory is writable by the invoking user unless that user is root
-                    (version 1.8.16 and higher).
-
-                 •  Files located in a directory that is writable by the invoking user may not be edited unless that user is root (version 1.8.16 and higher).
-
-                 Users are never allowed to edit device special files.
-
-                 If the specified file does not exist, it will be created.  Note that unlike most commands run by sudo, the editor is run with the invoking user's
-
-                 environment unmodified.  If, for some reason, sudo is unable to update a file with its edited version, the user will receive a warning and the
-                 edited copy will remain in a temporary file.
-
-     -g group, --group=group
-                 Run the command with the primary group set to group instead of the primary group specified by the target user's password database entry.  The
-                 group may be either a group name or a numeric group-ID (GID) prefixed with the ‘#’ character (e.g., #0 for GID 0).  When running a command as a
-                 GID, many shells require that the ‘#’ be escaped with a backslash (‘\’).  If no -u option is specified, the command will be run as the invoking
-                 user.  In either case, the primary group will be set to group.  The sudoers policy permits any of the target user's groups to be specified via the
-                 -g option as long as the -P option is not in use.
-
-
-     -H, --set-home
-                 Request that the security policy set the HOME environment variable to the home directory specified by the target user's password database entry.
-                 Depending on the policy, this may be the default behavior.
-
-     -h, --help  Display a short help message to the standard output and exit.
-
-     -h host, --host=host
-                 Run the command on the specified host if the security policy plugin supports remote commands.  Note that the sudoers plugin does not currently
-                 support running remote commands.  This may also be used in conjunction with the -l option to list a user's privileges for the remote host.
-
-     -i, --login
-                 Run the shell specified by the target user's password database entry as a login shell.  This means that login-specific resource files such as
-                 .profile, .bash_profile or .login will be read by the shell.  If a command is specified, it is passed to the shell for execution via the shell's
-                 -c option.  If no command is specified, an interactive shell is executed.  sudo attempts to change to that user's home directory before running
-                 the shell.  The command is run with an environment similar to the one a user would receive at log in.  Note that most shells behave differently
-                 when a command is specified as compared to an interactive session; consult the shell's manual for details.  The Command environment section in the
-                 sudoers(5) manual documents how the -i option affects the environment in which a command is run when the sudoers policy is in use.
-
-     -K, --remove-timestamp
-                 Similar to the -k option, except that it removes the user's cached credentials entirely and may not be used in conjunction with a command or other
-                 option.  This option does not require a password.  Not all security policies support credential caching.
-
-     -k, --reset-timestamp
-                 When used without a command, invalidates the user's cached credentials.  In other words, the next time sudo is run a password will be required.
-                 This option does not require a password and was added to allow a user to revoke sudo permissions from a .logout file.
-
-                 When used in conjunction with a command or an option that may require a password, this option will cause sudo to ignore the user's cached creden‐
-                 tials.  As a result, sudo will prompt for a password (if one is required by the security policy) and will not update the user's cached creden‐
-                 tials.
-
-                 Not all security policies support credential caching.
-
-     -l, --list  If no command is specified, list the allowed (and forbidden) commands for the invoking user (or the user specified by the -U option) on the cur‐
-                 rent host.  A longer list format is used if this option is specified multiple times and the security policy supports a verbose output format.
-
-                 If a command is specified and is permitted by the security policy, the fully-qualified path to the command is displayed along with any command
-                 line arguments.  If a command is specified but not allowed by the policy, sudo will exit with a status value of 1.
-
-     -n, --non-interactive
-                 Avoid prompting the user for input of any kind.  If a password is required for the command to run, sudo will display an error message and exit.
-
-     -P, --preserve-groups
-                 Preserve the invoking user's group vector unaltered.  By default, the sudoers policy will initialize the group vector to the list of groups the
-                 target user is a member of.  The real and effective group-IDs, however, are still set to match the target user.
-
-     -p prompt, --prompt=prompt
-                 Use a custom password prompt with optional escape sequences.  The following percent (‘%’) escape sequences are supported by the sudoers policy:
-
-                 %H  expanded to the host name including the domain name (on if the machine's host name is fully qualified or the fqdn option is set in sudoers(5))
-
-                 %h  expanded to the local host name without the domain name
-
-                 %p  expanded to the name of the user whose password is being requested (respects the rootpw, targetpw, and runaspw flags in sudoers(5))
-
-                 %U  expanded to the login name of the user the command will be run as (defaults to root unless the -u option is also specified)
-
-                 %u  expanded to the invoking user's login name
-
-                 %%  two consecutive ‘%’ characters are collapsed into a single ‘%’ character
-
-                 The custom prompt will override the default prompt specified by either the security policy or the SUDO_PROMPT environment variable.  On systems
-                 that use PAM, the custom prompt will also override the prompt specified by a PAM module unless the passprompt_override flag is disabled in
-                 sudoers.
-
-     -r role, --role=role
-                 Run the command with an SELinux security context that includes the specified role.
-
-     -S, --stdin
-                 Write the prompt to the standard error and read the password from the standard input instead of using the terminal device.
-
-     -s, --shell
-                 Run the shell specified by the SHELL environment variable if it is set or the shell specified by the invoking user's password database entry.  If
-                 a command is specified, it is passed to the shell for execution via the shell's -c option.  If no command is specified, an interactive shell is
-                 executed.  Note that most shells behave differently when a command is specified as compared to an interactive session; consult the shell's manual
-                 for details.
-
-     -t type, --type=type
-                 Run the command with an SELinux security context that includes the specified type.  If no type is specified, the default type is derived from the
-                 role.
-
-     -U user, --other-user=user
-                 Used in conjunction with the -l option to list the privileges for user instead of for the invoking user.  The security policy may restrict listing
-                 other users' privileges.  The sudoers policy only allows root or a user with the ALL privilege on the current host to use this option.
-
-
-     -T timeout, --command-timeout=timeout
-                 Used to set a timeout for the command.  If the timeout expires before the command has exited, the command will be terminated.  The security policy
-                 may restrict the ability to set command timeouts.  The sudoers policy requires that user-specified timeouts be explicitly enabled.
-
-     -u user, --user=user
-                 Run the command as a user other than the default target user (usually root).  The user may be either a user name or a numeric user-ID (UID) pre‐
-                 fixed with the ‘#’ character (e.g., #0 for UID 0).  When running commands as a UID, many shells require that the ‘#’ be escaped with a backslash
-                 (‘\’).  Some security policies may restrict UIDs to those listed in the password database.  The sudoers policy allows UIDs that are not in the
-                 password database as long as the targetpw option is not set.  Other security policies may not support this.
-
-     -V, --version
-                 Print the sudo version string as well as the version string of the security policy plugin and any I/O plugins.  If the invoking user is already
-                 root the -V option will display the arguments passed to configure when sudo was built and plugins may display more verbose information such as de‐
-                 fault options.
-
-     -v, --validate
-                 Update the user's cached credentials, authenticating the user if necessary.  For the sudoers plugin, this extends the sudo timeout for another 15
-                 minutes by default, but does not run a command.  Not all security policies support cached credentials.
-
-     --          The -- option indicates that sudo should stop processing command line arguments.
 
 
 EJEMPLOS:
@@ -458,171 +278,103 @@ Lista el contenido de un directorio
 
 OPCIONES:
 
-       -a, --all
-              do not ignore entries starting with .
+  -a, --all                  no oculta las entradas que comienzan con .
+  -A, --almost-all           no muestra las entradas . y .. implícitas
+      --author               con -l, imprime el autor de cada fichero
+  -b, --escape               imprime escapes en estilo C para los caracteres no
+                             gráficos
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                               e.g., '--block-size=M'; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         no ordena, utiliza -aU, no utiliza -ls --color
+  -F, --classify             añade un indicador (uno de */=@|) a las entradas
+      --file-type            similar, pero no añade '*'
+      --format=PALABRA       across -x, commas -m, horizontal -x, long -l,
+                               single-column -1, verbose -l, vertical -C
+      --full-time            como -l --time-style=full-iso
+  -g                         como -l, pero no lista el propietario
+      --group-directories-first
+                             agrupa directorios antes que los ficheros;
+                               se puede añadir una opción --sort, pero cualquier
+                               uso de --sort=none (-U) desactiva la agrupación
+  -G, --no-group             in a long listing, don't print group names
+  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             sigue los enlaces simbólicos en la línea de
+                             órdenes
+      --dereference-command-line-symlink-to-dir
+                             sigue cada enlace simbólico en la línea de
+                               órdenes que apunte a un directorio
+      --hide=PATRÓN          no lista las entradas implícitas que coinciden
+                               con el patrón de shell PATRÓN
+                               (las opciones -a o -A tienen prioridad)
+      --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
+                               (default if omitted), 'auto', or 'never'
+      --indicator-style=WORD  append indicator with style WORD to entry names:
+                               none (default), slash (-p),
+                               file-type (--file-type), classify (-F)
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for disk usage;
+                               used only with -s and per directory totals
+  -l                         utiliza un formato de listado largo
+  -L, --dereference          al mostrar la información de un fichero para un
+                               enlace simbólico, muestra la información del
+                               fichero al que apunta el enlace en lugar de la
+                               del propio enlace
+  -m                         rellena el ancho con una lista de entradas
+                             separadas por comas
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print entry names without quoting
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                               unless program is 'ls' and output is a terminal)
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                               literal, locale, shell, shell-always,
+                               shell-escape, shell-escape-always, c, escape
+                               (overrides QUOTING_STYLE environment variable)
+  -r, --reverse              invierte el orden, en su caso
+  -R, --recursive            muestra los subdirectorios recursivamente
+  -s, --size                 muestra el tamaño de cada fichero, en bloques
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                               time (-t), version (-v), extension (-X)
+      --time=WORD            with -l, show time as WORD instead of default
+                               modification time: atime or access or use (-u);
+                               ctime or status (-c); also use specified time
+                               as sort key if --sort=time (newest first)
+      --time-style=TIME_STYLE  time/date format with -l; see TIME_STYLE below
+  -t                         ordena por la fecha de modificación, el más
+                               reciente primero
+  -T, --tabsize=COLS         establece los topes de tabulación a cada COLS
+                             en lugar de 8
+  -u                         with -lt: sort by, and show, access time;
+                               with -l: show access time and sort by name;
+                               otherwise: sort by access time, newest first
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+  -1                         list one file per line.  Avoid '\n' with -q or -b
+      --help     muestra esta ayuda y finaliza
+      --version  informa de la versión y finaliza
 
-       -A, --almost-all
-              do not list implied . and ..
-
-       --author
-              with -l, print the author of each file
-
-       -b, --escape
-              print C-style escapes for nongraphic characters
-
-       --block-size=SIZE
-              with -l, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format below
-
-       -B, --ignore-backups
-              do not list implied entries ending with ~
-
-       -c     with  -lt:  sort by, and show, ctime (time of last modification of file status information); with -l: show ctime and sort by name; otherwise: sort by
-              ctime, newest first
-
-       -C     list entries by columns
-
-       --color[=WHEN]
-              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more info below
-
-       -d, --directory
-              list directories themselves, not their contents
-
-       -D, --dired
-              generate output designed for Emacs' dired mode
-
-       -f     do not sort, enable -aU, disable -ls --color
-
-       -F, --classify
-              append indicator (one of */=>@|) to entries
-
-       --file-type
-              likewise, except do not append '*'
-
-       --format=WORD
-              across -x, commas -m, horizontal -x, long -l, single-column -1, verbose -l, vertical -C
-
-       --full-time
-              like -l --time-style=full-iso
-
-       -g     like -l, but do not list owner
-
-       --group-directories-first
-              group directories before files;
-
-              can be augmented with a --sort option, but any use of --sort=none (-U) disables grouping
-
-       -G, --no-group
-              in a long listing, don't print group names
-
-       -h, --human-readable
-              with -l and -s, print sizes like 1K 234M 2G etc.
-
-       --si   likewise, but use powers of 1000 not 1024
-
-       -H, --dereference-command-line
-              follow symbolic links listed on the command line
-
-       --dereference-command-line-symlink-to-dir
-              follow each command line symbolic link
-
-              that points to a directory
-
-       --hide=PATTERN
-              do not list implied entries matching shell PATTERN (overridden by -a or -A)
-
-       --hyperlink[=WHEN]
-              hyperlink file names; WHEN can be 'always' (default if omitted), 'auto', or 'never'
-
-       --indicator-style=WORD
-              append indicator with style WORD to entry names: none (default), slash (-p), file-type (--file-type), classify (-F)
-
-       -i, --inode
-              print the index number of each file
-
-       -I, --ignore=PATTERN
-              do not list implied entries matching shell PATTERN
-
-       -k, --kibibytes
-              default to 1024-byte blocks for disk usage; used only with -s and per directory totals
-
-       -l     use a long listing format
-
-       -L, --dereference
-              when showing file information for a symbolic link, show information for the file the link references rather than for the link itself
-
-       -m     fill width with a comma separated list of entries
-
-       -n, --numeric-uid-gid
-
-       -N, --literal
-              print entry names without quoting
-
-       -o     like -l, but do not list group information
-
-       -p, --indicator-style=slash
-              append / indicator to directories
-
-       -q, --hide-control-chars
-              print ? instead of nongraphic characters
-
-       --show-control-chars
-              show nongraphic characters as-is (the default, unless program is 'ls' and output is a terminal)
-
-       -Q, --quote-name
-              enclose entry names in double quotes
-
-       --quoting-style=WORD
-              use quoting style WORD for entry names: literal, locale, shell, shell-always, shell-escape, shell-escape-always, c, escape  (overrides  QUOTING_STYLE
-              environment variable)
-
-       -r, --reverse
-              reverse order while sorting
-
-       -R, --recursive
-              list subdirectories recursively
-
-        -s, --size
-              print the allocated size of each file, in blocks
-
-       -S     sort by file size, largest first
-
-       --sort=WORD
-              sort by WORD instead of name: none (-U), size (-S), time (-t), version (-v), extension (-X)
-
-       --time=WORD
-              with  -l,  show time as WORD instead of default modification time: atime or access or use (-u); ctime or status (-c); also use specified time as sort
-              key if --sort=time (newest first)
-
-       --time-style=TIME_STYLE
-              time/date format with -l; see TIME_STYLE below
-
-       -t     sort by modification time, newest first
-
-       -T, --tabsize=COLS
-              assume tab stops at each COLS instead of 8
-
-       -u     with -lt: sort by, and show, access time; with -l: show access time and sort by name; otherwise: sort by access time, newest first
-
-       -U     do not sort; list entries in directory order
-
-       -v     natural sort of (version) numbers within text
-
-       -w, --width=COLS
-              set output width to COLS.  0 means no limit
-
-       -x     list entries by lines instead of by columns
-
-       -X     sort alphabetically by entry extension
-
-       -Z, --context
-              print any security context of each file
-
-       -1     list one file per line.  Avoid '\n' with -q or -b
-
-       --help display this help and exit
-
-       --version
-              output version information and exit
 
 
 EJEMPLOS:
@@ -669,3 +421,137 @@ pwd
 pwd
 
 /home/user/Documentos
+
+mkdir
+====
+
+Crea directorio
+
+OPCIONES:
+
+       -m, --mode=MODE
+              set file mode (as in chmod), not a=rwx - umask
+
+       -p, --parents
+              no error if existing, make parent directories as needed
+
+       -v, --verbose
+              print a message for each created directory
+
+       -Z     set SELinux security context of each created directory to the default type
+
+       --context[=CTX]
+              like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+EJEMPLOS:
+
+mkdir test
+
+mkdir test2 -p
+
+
+cd
+===
+
+Cambia el directorio actual de trabajo
+
+OPCIONES:
+
+      -L	fuerza a seguir los enlaces simbólicos: resuelve los enlaces
+    		simbólicos en DIR después de procesar las instancias de `..'
+      -P	usa la estructura física de directorios sin seguir los enlaces
+    		simbólicos: resuelve los enlaces simbólicos en DIR antes de procesar
+    		las instancias de `..'
+      -e	si se da la opción -P y el directorio actual de trabajo no se
+    		puede determinar con éxito, termina con un estado diferente de cero.
+
+      La acción por defecto es seguir los enlaces simbólicos, como si se
+      especificara `-L'.
+      `..' se procesa quitando la componente del nombre de la ruta inmediatamente
+      anterior hasta una barra inclinada o el comienzo de DIR.
+
+EJEMPLOS:
+
+user@computername:~$cd ..
+
+user@computername:~$/home$
+
+user@computername:~$ cd Documentos/test
+
+user@computername:~/Documentos/test$
+
+
+touch
+=====
+
+Actualiza la fecha de acceso y modificación de cada FICHERO a la hora actual.
+
+Tambien se puede utilizar para crear archivos.
+
+OPCIONES:
+
+  -a                     cambia solamente la fecha de acceso
+  -c, --no-create        no crea ningún fichero
+  -d, --date=CADENA      examina y utiliza CADENA en lugar de la fecha actual
+  -f                     (no tiene efecto)
+  -h, --no-dereference   afecta a cada enlace simbólico en lugar de a los
+                         ficheros referidos (solamente es útil en sistemas
+                         que pueden cambiar el propietario de un enlace
+                         simbólico)
+  -m                     cambia solamente la fecha de modificación
+  -r, --reference=FICHERO utiliza la fecha de este FICHERO en lugar de la fecha
+                          actual
+  -t FECHA                utiliza [[SS]AA]MMDDhhmm[.ss] en lugar de la fecha
+                          actual
+      --time=PALABRA      establece la fecha dada por PALABRA:
+                            PALABRA es access, atime o use: equivale a -a
+                            PALABRA es modify o mtime: equivale a -m
+      --help     muestra esta ayuda y finaliza
+      --version  informa de la versión y finaliza
+
+Tenga en cuenta que las opciones -d y -t aceptan formatos de
+hora-fecha distintos.
+
+
+EJEMPLOS:
+
+
+user@computername:~$touch test
+
+user@computername:~$touch -a test
+
+cat
+===
+
+Concatena archivos e imprime en la salida estandar
+
+OPCIONES:
+
+-A, --show-all           equivalent to -vET
+  -b, --number-nonblank    number nonempty output lines, overrides -n
+  -e                       equivalent to -vE
+  -E, --show-ends          display $ at end of each line
+  -n, --number             number all output lines
+  -s, --squeeze-blank      suppress repeated empty output lines
+  -t                       equivalente a -vT
+  -T, --show-tabs          muestra los caracteres de tabulación como ^I
+  -u                       (sin efecto)
+  -v, --show-nonprinting   utiliza la notación ^ y M-, salvo para LFD y TAB
+      --help     muestra esta ayuda y finaliza
+      --version  informa de la versión y finaliza
+
+EJEMPLOS:
+
+   cat f - g Muestra los contenidos de f, luego la entrada estándar,
+              luego los contenidos de g.
+   cat       Copia la entrada estándar en la salida estándar.
+
+
+
+
+
