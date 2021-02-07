@@ -135,6 +135,59 @@ apt
 
 apt es una interface para el manejo del sistema de paquetes. Esta diseñada para el usuario final y permite algunas opciones mejores para uso interactivo.
 
+opciones:
+
+
+pdate (apt-get(8))
+           update is used to download package information from all configured sources. Other commands operate on this data to e.g. perform package upgrades or search in and display details about
+           all packages available for installation.
+
+       upgrade (apt-get(8))
+           upgrade is used to install available upgrades of all packages currently installed on the system from the sources configured via sources.list(5). New packages will be installed if
+           required to satisfy dependencies, but existing packages will never be removed. If an upgrade for a package requires the removal of an installed package the upgrade for this package isn't
+           performed.
+
+       full-upgrade (apt-get(8))
+           full-upgrade performs the function of upgrade but will remove currently installed packages if this is needed to upgrade the system as a whole.
+
+       install, reinstall, remove, purge (apt-get(8))
+           Performs the requested action on one or more packages specified via regex(7), glob(7) or exact match. The requested action can be overridden for specific packages by appending a plus (+)
+           to the package name to install this package or a minus (-) to remove it.
+
+           A specific version of a package can be selected for installation by following the package name with an equals (=) and the version of the package to select. Alternatively the version from
+           a specific release can be selected by following the package name with a forward slash (/) and codename (buster, bullseye, sid ...) or suite name (stable, testing, unstable). This will
+           also select versions from this release for dependencies of this package if needed to satisfy the request.
+
+           Removing a package removes all packaged data, but leaves usually small (modified) user configuration files behind, in case the remove was an accident. Just issuing an installation
+           request for the accidentally removed package will restore its function as before in that case. On the other hand you can get rid of these leftovers by calling purge even on already
+           removed packages. Note that this does not affect any data or configuration stored in your home directory.
+
+       autoremove (apt-get(8))
+           autoremove is used to remove packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed as dependencies changed or the package(s)
+           needing them were removed in the meantime.
+
+           You should check that the list does not include applications you have grown to like even though they were once installed just as a dependency of another package. You can mark such a
+           package as manually installed by using apt-mark(8). Packages which you have installed explicitly via install are also never proposed for automatic removal.
+
+       satisfy (apt-get(8))
+           satisfy satisfies dependency strings, as used in Build-Depends. It also handles conflicts, by prefixing an argument with "Conflicts: ".
+
+           Example: apt satisfy "foo, bar (>= 1.0)" "Conflicts: baz, fuzz"
+
+       search (apt-cache(8))
+           search can be used to search for the given regex(7) term(s) in the list of available packages and display matches. This can e.g. be useful if you are looking for packages having a
+           specific feature. If you are looking for a package including a specific file try apt-file(1).
+
+       show (apt-cache(8))
+           Show information about the given package(s) including its dependencies, installation and download size, sources the package is available from, the description of the packages content and
+           much more. It can e.g. be helpful to look at this information before allowing apt(8) to remove a package or while searching for new packages to install.
+
+       list
+           list is somewhat similar to dpkg-query --list in that it can display a list of packages satisfying certain criteria. It supports glob(7) patterns for matching package names as well as
+           options to list installed (--installed), upgradeable (--upgradeable) or all available (--all-versions) versions.
+
+edit-sources (work-in-progress)
+           edit-sources lets you edit your sources.list(5) files in your preferred text editor while also providing basic sanity checks.
 
 
 
