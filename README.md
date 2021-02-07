@@ -547,9 +547,13 @@ OPCIONES:
 
 EJEMPLOS:
 
-   cat f - g Muestra los contenidos de f, luego la entrada estándar,
+   cat f - g 
+
+Muestra los contenidos de f, luego la entrada estándar,
               luego los contenidos de g.
-   cat       Copia la entrada estándar en la salida estándar.
+   cat       
+
+Copia la entrada estándar en la salida estándar.
 
 
 
