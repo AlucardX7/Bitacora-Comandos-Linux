@@ -416,11 +416,11 @@ EJEMPLOS:
 
 user@computername:~$pwd
 
-/home/user
+	/home/user
 
 user@computername:~/Documentos$pwd
 
-/home/user/Documentos
+	/home/user/Documentos
 
 mkdir
 ====
