@@ -551,6 +551,7 @@ EJEMPLOS:
 
 Muestra los contenidos de f, luego la entrada estándar,
               luego los contenidos de g.
+
    cat       
 
 Copia la entrada estándar en la salida estándar.
