@@ -595,9 +595,6 @@ El programa top proporciona una vision dinamica en tiempo real de un sistema cor
 
 OPCIONES:
 
-
-he command-line syntax for top consists of:
-
        -hv|-bcEHiOSs1 -d secs -n max -u|U user -p pid -o fld -w [cols]
 
        The typically mandatory switch (`-') and even whitespace are completely optional.
@@ -632,7 +629,7 @@ he command-line syntax for top consists of:
             Later this can be changed with the `E' command toggle.
 
 
--H  :Threads-mode operation
+	-H  :Threads-mode operation
             Instructs top to display individual threads.  Without this command-line option a summation of all threads in each process is shown.  Later this can  be
             changed with the `H' interactive command.
 
@@ -666,7 +663,7 @@ he command-line syntax for top consists of:
             The `p', `u' and `U' command-line options are mutually exclusive.
 
 
- -s  :Secure-mode operation
+ 	-s  :Secure-mode operation
             Starts top with secure mode forced, even for root.  This mode is far better controlled through a system configuration file (see topic 6. FILES).
 
        -S  :Cumulative-time toggle
