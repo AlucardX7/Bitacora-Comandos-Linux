@@ -1118,57 +1118,57 @@ Editor de texto
 OPCIONES:
 
 
-Opción         Opción larga            Significado
- -A             --smarthome             Habilitar una tecla de inicio inteligente
- -B             --backup                Guardar respaldo de los ficheros existentes
- -C <dir>       --backupdir=<dir>       Directorio donde guardar ficheros de respaldo
- -D             --boldtext              Usar negrita en lugar de texto inverso
- -E             --tabstospaces          Convertir tabulaciones a espacios al escribir
- -F             --multibuffer           Leer fichero dejándolo en un buffer diferente como comportamiento predefinido
- -G             --locking               Usar ficheros de bloqueo (estilo vim)
- -H             --historylog            Registrar y leer histórico de cadenas de búsqueda/reemplazo
- -I             --ignorercfiles         No leer los ficheros nanorc
- -J <número>    --guidestripe=<número>  Mostrar una barra de guía en esta columna
- -K             --rawsequences          Arreglar el problema de confusión del teclado numérico
- -L             --nonewlines            No añadir nueva línea automática
- -M             --trimblanks            Eliminar espacios finales cuando se aplique ajuste estricto
- -N             --noconvert             No convertir los ficheros desde el formato DOS/Mac
- -P             --positionlog           Guardar y restaurar la posición del cursor
- -Q <regex>     --quotestr=<regex>      Expresión regular para coincidir con cita
- -R             --restricted            Restringir acceso al sistema de ficheros
- -T <número>    --tabsize=<número>      Fijar el ancho de tab a <número> columnas
- -U             --quickblank            Limpiar la barra de estado con la siguiente tecla pulsada
- -V             --version               Mostrar información sobre la versión y salir
- -W             --wordbounds            Detectar límite entre palabras con más exactitud
- -X <cadena>    --wordchars=<cadena>    Qué otros caracteres son partes de palabra
- -Y <nombre>    --syntax=<nombre>       Definición de sintaxis a usar para coloreado
- -Z             --zap                   Permitir que Bsp y Del borren una región demarcada
- -a             --atblanks              Al hacer ajuste de línea suave, hacerlo en espacio en blanco
- -b             --breaklonglines        Ajuste estricto automático de líneas largas
- -c             --constantshow          Mostrar constantemente la posición del cursor
- -d             --rebinddelete          Arreglar el problema de confusión Retroceso/Suprimir
- -e             --emptyline             Mantener vacía la línea bajo la barra de título
- -f <fichero>   --rcfile=<fichero>      Utilizar solo este fichero para configurar nano
- -g             --showcursor            Mostrar cursor en el navegador de ficheros y en el texto de ayuda
- -h             --help                  Mostrar este texto de ayuda y salir
- -i             --autoindent            Sangrar automáticamente nuevas líneas
- -j             --jumpyscrolling        Desplazamiento por medias pantallas, no por línea
- -k             --cutfromcursor         Cortar desde el cursor al final de línea
- -l             --linenumbers           Mostrar los números de línea delante del texto
- -m             --mouse                 Habilitar el uso del ratón
- -n             --noread                No leer el fichero (sólo escribirlo)
- -o <dir>       --operatingdir=<dir>    Establecer el directorio de operación
- -p             --preserve              Conservar teclas XON (^Q) y XOFF (^S)
- -r <número>    --fill=<número>         Establecer anchura para ajuste estricto y justificación
- -s <programa>  --speller=<programa>    Habilitar un corrector ortográfico alternativo
- -t             --tempfile              Guardar automáticamente al salir, sin preguntar
- -u             --unix                  Guardar fichero en formato Unix por omisión
- -v             --view                  Modo de visualización (sólo lectura)
- -w             --nowrap                No ajustar rígidamente líneas largas [comportamiento predefinido]
- -x             --nohelp                No mostrar las dos líneas de ayuda
- -y             --afterends             Configurar Ctrl+derecha para que se detenga al final de las palabras
- -z             --suspend               Habilitar suspensión
- -$             --softwrap              Habilitar ajuste de línea suave
+		Opción         Opción larga            Significado
+ 		-A             --smarthome             Habilitar una tecla de inicio inteligente
+ 		-B             --backup                Guardar respaldo de los ficheros existentes
+ 		-C <dir>       --backupdir=<dir>       Directorio donde guardar ficheros de respaldo
+ 		-D             --boldtext              Usar negrita en lugar de texto inverso
+ 		-E             --tabstospaces          Convertir tabulaciones a espacios al escribir
+ 		-F             --multibuffer           Leer fichero dejándolo en un buffer diferente como comportamiento predefinido
+ 		-G             --locking               Usar ficheros de bloqueo (estilo vim)
+ 		-H             --historylog            Registrar y leer histórico de cadenas de búsqueda/reemplazo
+ 		-I             --ignorercfiles         No leer los ficheros nanorc
+ 		-J <número>    --guidestripe=<número>  Mostrar una barra de guía en esta columna
+ 		-K             --rawsequences          Arreglar el problema de confusión del teclado numérico
+ 		-L             --nonewlines            No añadir nueva línea automática
+ 		-M             --trimblanks            Eliminar espacios finales cuando se aplique ajuste estricto
+ 		-N             --noconvert             No convertir los ficheros desde el formato DOS/Mac
+ 		-P             --positionlog           Guardar y restaurar la posición del cursor
+ 		-Q <regex>     --quotestr=<regex>      Expresión regular para coincidir con cita
+ 		-R             --restricted            Restringir acceso al sistema de ficheros
+ 		-T <número>    --tabsize=<número>      Fijar el ancho de tab a <número> columnas
+ 		-U             --quickblank            Limpiar la barra de estado con la siguiente tecla pulsada
+ 		-V             --version               Mostrar información sobre la versión y salir
+ 		-W             --wordbounds            Detectar límite entre palabras con más exactitud
+		 -X <cadena>    --wordchars=<cadena>    Qué otros caracteres son partes de palabra
+ 		-Y <nombre>    --syntax=<nombre>       Definición de sintaxis a usar para coloreado
+ 		-Z             --zap                   Permitir que Bsp y Del borren una región demarcada
+ 		-a             --atblanks              Al hacer ajuste de línea suave, hacerlo en espacio en blanco
+ 		-b             --breaklonglines        Ajuste estricto automático de líneas largas
+ 		-c             --constantshow          Mostrar constantemente la posición del cursor
+ 		-d             --rebinddelete          Arreglar el problema de confusión Retroceso/Suprimir
+ 		-e             --emptyline             Mantener vacía la línea bajo la barra de título
+ 		-f <fichero>   --rcfile=<fichero>      Utilizar solo este fichero para configurar nano
+ 		-g             --showcursor            Mostrar cursor en el navegador de ficheros y en el texto de ayuda
+ 		-h             --help                  Mostrar este texto de ayuda y salir
+ 		-i             --autoindent            Sangrar automáticamente nuevas líneas
+ 		-j             --jumpyscrolling        Desplazamiento por medias pantallas, no por línea
+ 		-k             --cutfromcursor         Cortar desde el cursor al final de línea
+ 		-l             --linenumbers           Mostrar los números de línea delante del texto
+ 		-m             --mouse                 Habilitar el uso del ratón
+ 		-n             --noread                No leer el fichero (sólo escribirlo)
+ 		-o <dir>       --operatingdir=<dir>    Establecer el directorio de operación
+ 		-p             --preserve              Conservar teclas XON (^Q) y XOFF (^S)
+ 		-r <número>    --fill=<número>         Establecer anchura para ajuste estricto y justificación
+ 		-s <programa>  --speller=<programa>    Habilitar un corrector ortográfico alternativo
+ 		-t             --tempfile              Guardar automáticamente al salir, sin preguntar
+ 		-u             --unix                  Guardar fichero en formato Unix por omisión
+ 		-v             --view                  Modo de visualización (sólo lectura)
+ 		-w             --nowrap                No ajustar rígidamente líneas largas [comportamiento predefinido]
+ 		-x             --nohelp                No mostrar las dos líneas de ayuda
+ 		-y             --afterends             Configurar Ctrl+derecha para que se detenga al final de las palabras
+ 		-z             --suspend               Habilitar suspensión
+ 		-$             --softwrap              Habilitar ajuste de línea suave
 
 
 
