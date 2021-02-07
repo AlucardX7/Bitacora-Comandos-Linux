@@ -51,7 +51,7 @@ opciones:
 
        -M     shortcut for -family mpls.
 
--0     shortcut for -family link.
+       -0     shortcut for -family link.
 
        -o, -oneline
               output each record on a single line, replacing line feeds with the '\' charac‐
