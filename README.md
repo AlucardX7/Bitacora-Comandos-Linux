@@ -233,30 +233,30 @@ OPCIONES:
   	-b, --background              ejecutar comando en segundo plano
  	-B, --bell                    ring bell when prompting
   	-C, --close-from=num          cerrar todos los descriptores de archivo >= num
-  -E, --preserve-env            conservar entorno del usuario al ejecutar el comando
-      --preserve-env=list       conservar las variables de entorno específicas
-  -e, --edit                    editar archivos en lugar de ejecutar un comando
-  -g, --group=group             ejecutar comandos según el nombre o ID de grupo especificado
-  -H, --set-home                asignar la variable HOME al directorio de inicio del usuario
-  -h, --help                    mostrar mensaje de ayuda y salir
-  -h, --host=host               ejecutar comando en host (si lo admite el complemento)
-  -i, --login                   ejecutar consola de sesión como usuario de destino; también se puede especificar un comando
-  -K, --remove-timestamp        eliminar archivo de marca de tiempo por completo
-  -k, --reset-timestamp         invalidar archivo de marca de tiempo
-  -l, --list                    enumerar privilegios del usuario o comprobar un comando específico; utilizar dos veces para un formato más largo
-  -n, --non-interactive         modo no interactivo, no se utiliza ninguna solicitud
-  -P, --preserve-groups         conservar vector de grupos en vez de establecer de objetivo
-  -p, --prompt=prompt           utilizar la solicitud de contraseña especificada
-  -r, --role=role               crear contexto de seguridad SELinux con el rol especificado
-  -S, --stdin                   leer contraseña de entrada estándar
-  -s, --shell                   ejecutar consola como el usuario de destino; también se puede especificar un comando
-  -t, --type=type               crear contexto de seguridad SELinux con el tipo especificado
-  -T, --command-timeout=timeout orden de finalizar después del tiempo límite especificado
-  -U, --other-user=user         en modo de lista, mostrar privilegios del usuario
-  -u, --user=user               ejecutar comando (o editar archivo) como el nombre o ID de usuario especificado
-  -V, --version                 mostrar información de la versión y salir
-  -v, --validate                actualizar marca de tiempo del usuario sin ejecutar un comando
-  --                            detener procesamiento de argumentos de línea de comando
+        -E, --preserve-env            conservar entorno del usuario al ejecutar el comando
+        --preserve-env=list       conservar las variables de entorno específicas
+  	-e, --edit                    editar archivos en lugar de ejecutar un comando
+  	-g, --group=group             ejecutar comandos según el nombre o ID de grupo especificado
+  	-H, --set-home                asignar la variable HOME al directorio de inicio del usuario
+  	-h, --help                    mostrar mensaje de ayuda y salir
+  	-h, --host=host               ejecutar comando en host (si lo admite el complemento)
+  	-i, --login                   ejecutar consola de sesión como usuario de destino; también se puede especificar un comando
+  	-K, --remove-timestamp        eliminar archivo de marca de tiempo por completo
+  	-k, --reset-timestamp         invalidar archivo de marca de tiempo
+  	-l, --list                    enumerar privilegios del usuario o comprobar un comando específico; utilizar dos veces para un formato más largo
+  	-n, --non-interactive         modo no interactivo, no se utiliza ninguna solicitud
+  	-P, --preserve-groups         conservar vector de grupos en vez de establecer de objetivo
+  	-p, --prompt=prompt           utilizar la solicitud de contraseña especificada
+  	-r, --role=role               crear contexto de seguridad SELinux con el rol especificado
+  	-S, --stdin                   leer contraseña de entrada estándar
+  	-s, --shell                   ejecutar consola como el usuario de destino; también se puede especificar un comando
+  	-t, --type=type               crear contexto de seguridad SELinux con el tipo especificado
+  	-T, --command-timeout=timeout orden de finalizar después del tiempo límite especificado
+  	-U, --other-user=user         en modo de lista, mostrar privilegios del usuario
+  	-u, --user=user               ejecutar comando (o editar archivo) como el nombre o ID de usuario especificado
+  	-V, --version                 mostrar información de la versión y salir
+  	-v, --validate                actualizar marca de tiempo del usuario sin ejecutar un comando
+  	--                            detener procesamiento de argumentos de línea de comando
 
 
 
