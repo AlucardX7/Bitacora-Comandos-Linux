@@ -1060,43 +1060,43 @@ Editor de texto
 
 OPCIONES:
 
---			Only file names after this
-   -v			Vi mode (like "vi")
-   -e			Ex mode (like "ex")
-   -E			Improved Ex mode
-   -s			Silent (batch) mode (only for "ex")
-   -y			Easy mode (like "evim", modeless)
-   -R			Readonly mode (like "view")
-   -Z			Restricted mode (like "rvim")
-   -m			Modifications (writing files) not allowed
-   -M			Modifications in text not allowed
-   -b			Binary mode
-   -C			Compatible with Vi: 'compatible'
-   -N			Not fully Vi compatible: 'nocompatible'
-   -V[N][fname]		Be verbose [level N] [log messages to fname]
-   -n			No swap file, use memory only
-   -r			List swap files and exit
-   -r (with file name)	Recover crashed session
-   -L			Same as -r
-   -T <terminal>	Set terminal type to <terminal>
-   --not-a-term		Skip warning for input/output not being a terminal
-   --ttyfail		Exit if input or output is not a terminal
-   -u <vimrc>		Use <vimrc> instead of any .vimrc
-   --noplugin		Don't load plugin scripts
-   -p[N]		Open N tab pages (default: one for each file)
-   -o[N]		Open N windows (default: one for each file)
-   -O[N]		Like -o but split vertically
-   +			Start at end of file
-   +<lnum>		Start at line <lnum>
-   --cmd <command>	Execute <command> before loading any vimrc file
-   -c <command>		Execute <command> after loading the first file
-   -S <session>		Source file <session> after loading the first file
-   -s <scriptin>	Read Normal mode commands from file <scriptin>
-   -w <scriptout>	Append all typed commands to file <scriptout>
-   -W <scriptout>	Write all typed commands to file <scriptout>
-   --clean		'nocompatible', Vim defaults, no plugins, no viminfo
-   -h  or  --help	Print Help (this message) and exit
-   --version		Print version information and exit
+		--			Only file names after this
+   		-v			Vi mode (like "vi")
+   		-e			Ex mode (like "ex")
+   		-E			Improved Ex mode
+   		-s			Silent (batch) mode (only for "ex")
+   		-y			Easy mode (like "evim", modeless)
+   		-R			Readonly mode (like "view")
+   		-Z			Restricted mode (like "rvim")
+   		-m			Modifications (writing files) not allowed
+   		-M			Modifications in text not allowed
+   		-b			Binary mode
+   		-C			Compatible with Vi: 'compatible'
+   		-N			Not fully Vi compatible: 'nocompatible'
+   		-V[N][fname]		Be verbose [level N] [log messages to fname]
+   		-n			No swap file, use memory only
+   		-r			List swap files and exit
+   		-r (with file name)	Recover crashed session
+   		-L			Same as -r
+   		-T <terminal>	Set terminal type to <terminal>
+   		--not-a-term		Skip warning for input/output not being a terminal
+   		--ttyfail		Exit if input or output is not a terminal
+   		-u <vimrc>		Use <vimrc> instead of any .vimrc
+   		--noplugin		Don't load plugin scripts
+   		-p[N]		Open N tab pages (default: one for each file)
+   		-o[N]		Open N windows (default: one for each file)
+   		-O[N]		Like -o but split vertically
+   		+			Start at end of file
+   		+<lnum>		Start at line <lnum>
+   		--cmd <command>	Execute <command> before loading any vimrc file
+   		-c <command>		Execute <command> after loading the first file
+   		-S <session>		Source file <session> after loading the first file
+   		-s <scriptin>	Read Normal mode commands from file <scriptin>
+   		-w <scriptout>	Append all typed commands to file <scriptout>
+   		-W <scriptout>	Write all typed commands to file <scriptout>
+   		--clean		'nocompatible', Vim defaults, no plugins, no viminfo
+   		-h  or  --help	Print Help (this message) and exit
+   		--version		Print version information and exit
 
 
 EJEMPLO:
