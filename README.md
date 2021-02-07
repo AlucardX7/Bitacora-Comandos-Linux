@@ -777,22 +777,22 @@ EJEMPLOS:
 user@computername:~$ps
 
     PID TTY          TIME CMD
-   2064 pts/0    00:00:00 bash
-   4152 pts/0    00:00:00 ps
+    2064 pts/0    00:00:00 bash
+    4152 pts/0    00:00:00 ps
 
 user@computername:~$ps -aux
 
-USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root           1  0.0  0.2 102100 11756 ?        Ss   10:53   0:02 /sbin/init splash
-root           2  0.0  0.0      0     0 ?        S    10:53   0:00 [kthreadd]
-root           3  0.0  0.0      0     0 ?        I<   10:53   0:00 [rcu_gp]
-root           4  0.0  0.0      0     0 ?        I<   10:53   0:00 [rcu_par_gp]
-root           6  0.0  0.0      0     0 ?        I<   10:53   0:00 [kworker/0:0H-kblockd]
-root           8  0.0  0.0      0     0 ?        I<   10:53   0:00 [mm_percpu_wq]
-root           9  0.0  0.0      0     0 ?        S    10:53   0:00 [ksoftirqd/0]
-root          10  0.0  0.0      0     0 ?        I    10:53   0:00 [rcu_sched]
-root          11  0.0  0.0      0     0 ?        S    10:53   0:00 [migration/0]
-root          12  0.0  0.0      0     0 ?        S    10:53   0:00 [idle_inject/0]
+	USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+	root           1  0.0  0.2 102100 11756 ?        Ss   10:53   0:02 /sbin/init splash
+	root           2  0.0  0.0      0     0 ?        S    10:53   0:00 [kthreadd]
+	root           3  0.0  0.0      0     0 ?        I<   10:53   0:00 [rcu_gp]
+	root           4  0.0  0.0      0     0 ?        I<   10:53   0:00 [rcu_par_gp]
+	root           6  0.0  0.0      0     0 ?        I<   10:53   0:00 [kworker/0:0H-kblockd]
+	root           8  0.0  0.0      0     0 ?        I<   10:53   0:00 [mm_percpu_wq]
+	root           9  0.0  0.0      0     0 ?        S    10:53   0:00 [ksoftirqd/0]
+	root          10  0.0  0.0      0     0 ?        I    10:53   0:00 [rcu_sched]
+	root          11  0.0  0.0      0     0 ?        S    10:53   0:00 [migration/0]
+	root          12  0.0  0.0      0     0 ?        S    10:53   0:00 [idle_inject/0]
 
 pstree
 ======
