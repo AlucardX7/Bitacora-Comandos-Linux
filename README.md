@@ -187,11 +187,79 @@ pdate (apt-get(8))
            options to list installed (--installed), upgradeable (--upgradeable) or all available (--all-versions) versions.
 
 edit-sources (work-in-progress)
-           edit-sources lets you edit your sources.list(5) files in your preferred text editor while also providing basic sanity checks.
+           edit-sources lets you edit your sources.list(5) files in your preferred text editor while also providing basic sanity checks.man apt
 
 
+ejemplos:
+
+apt show firefox
+
+Package: firefox
+Version: 85.0+build1-0ubuntu0.20.04.1
+Priority: optional
+Section: web
+Origin: Ubuntu
+
+sudo apt update
+
+Obj:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+Obj:2 http://cr.archive.ubuntu.com/ubuntu focal InRelease
+Obj:3 http://cr.archive.ubuntu.com/ubuntu focal-updates InRelease
+Obj:4 http://cr.archive.ubuntu.com/ubuntu focal-backports InRelease
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+Todos los paquetes están actualizados.
 
 
+lsb_release 
+===========
+
+Imprime informacion especifica de la distribucion
+
+opciones:
+
+PTIONS
+       The program follows the usual GNU command line syntax, with long options starting with two dashes (`--').  A summary of options are included below.
+
+       -v, --version
+              Show  the  version of the LSB against which your current installation is compliant.  The version is expressed as a colon separated list of LSB module
+              descriptions.
+
+       -i, --id
+              Display the distributor's ID.
+
+       -d, --description
+              Display a description of the currently installed distribution.
+
+       -r, --release
+              Display the release number of the currently installed distribution.
+
+       -c, --codename
+              Display the code name of the currently installed distribution.
+
+       -a, --all
+              Display all of the above information.
+
+       -s, --short
+              Use the short output format for any information displayed.  This format omits the leading header(s).
+
+       -h, --help
+              Show summary of options.
+
+
+ejemplos:
+
+lsb_release -d
+Description:	Ubuntu 20.04.2 LTS
+
+lsb_release -a
+
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
 
 
 
