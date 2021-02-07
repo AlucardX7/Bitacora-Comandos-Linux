@@ -381,12 +381,12 @@ EJEMPLOS:
 
 user@computername:~$ls
 
-Descargas  Documentos  Escritorio  Imágenes  Música  Plantillas  Público  snap  Vídeos
+	Descargas  Documentos  Escritorio  Imágenes  Música  Plantillas  Público  snap  Vídeos
 
 user@computername:~/Descargas$ls 
 
-Descargas/
-250d3f5f571b8aeb3a8fa9b42be116925faa83db.jpeg
+
+	250d3f5f571b8aeb3a8fa9b42be116925faa83db.jpeg
 
 pwd
 ===
