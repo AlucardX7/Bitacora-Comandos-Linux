@@ -1,5 +1,5 @@
 # Bitacora Comandos Linux
- Descripcion, Parametros y Ejemplos
+ Descripcion, Opciones y Ejemplos
 
 
 ip addr
@@ -139,7 +139,7 @@ apt es una interface para el manejo del sistema de paquetes. Esta diseñada para
 OPCIONES:
 
 
-pdate (apt-get(8))
+       update (apt-get(8))
            update is used to download package information from all configured sources. Other commands operate on this data to e.g. perform package upgrades or search in and display details about
            all packages available for installation.
 
@@ -187,7 +187,7 @@ pdate (apt-get(8))
            list is somewhat similar to dpkg-query --list in that it can display a list of packages satisfying certain criteria. It supports glob(7) patterns for matching package names as well as
            options to list installed (--installed), upgradeable (--upgradeable) or all available (--all-versions) versions.
 
-edit-sources (work-in-progress)
+       edit-sources (work-in-progress)
            edit-sources lets you edit your sources.list(5) files in your preferred text editor while also providing basic sanity checks.man apt
 
 
