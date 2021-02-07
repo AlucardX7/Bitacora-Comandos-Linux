@@ -229,10 +229,10 @@ Sudo permite a otro usuario ejecutar un comando como super usuario o como otro u
 
 OPCIONES:
 
-   -A, --askpass                 utilizar un programa auxiliar para la solicitud de contraseña
-  -b, --background              ejecutar comando en segundo plano
-  -B, --bell                    ring bell when prompting
-  -C, --close-from=num          cerrar todos los descriptores de archivo >= num
+  	-A, --askpass                 utilizar un programa auxiliar para la solicitud de contraseña
+  	-b, --background              ejecutar comando en segundo plano
+ 	-B, --bell                    ring bell when prompting
+  	-C, --close-from=num          cerrar todos los descriptores de archivo >= num
   -E, --preserve-env            conservar entorno del usuario al ejecutar el comando
       --preserve-env=list       conservar las variables de entorno específicas
   -e, --edit                    editar archivos en lugar de ejecutar un comando
