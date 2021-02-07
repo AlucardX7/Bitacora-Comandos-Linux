@@ -835,33 +835,33 @@ EJEMPLOS:
 
 user@computername:~$pstree -a
 
-systemd splash
-  ├─ModemManager --filter-policy=strict
-  │   └─2*[{ModemManager}]
-  ├─NetworkManager --no-daemon
-  │   └─2*[{NetworkManager}]
-  ├─VBoxClient --clipboard
-  │   └─VBoxClient --clipboard
-  │       └─2*[{VBoxClient}]
-  ├─VBoxClient --seamless
-  │   └─VBoxClient --seamless
+	systemd splash
+  	├─ModemManager --filter-policy=strict
+  	│   	└─2*[{ModemManager}]
+  	├─NetworkManager --no-daemon
+  	│   └─2*[{NetworkManager}]
+  	├─VBoxClient --clipboard
+  	│   └─VBoxClient --clipboard
+  	│       └─2*[{VBoxClient}]
+  	├─VBoxClient --seamless
+  	│   └─VBoxClient --seamless
 
 
 user@computername:~$pstree -g
 
-systemd(1)─┬─ModemManager(572)─┬─{ModemManager}(572)
-           │                   └─{ModemManager}(572)
-           ├─NetworkManager(471)─┬─{NetworkManager}(471)
-           │                     └─{NetworkManager}(471)
-           ├─VBoxClient(1429)───VBoxClient(1429)─┬─{VBoxClient}(1429)
-           │                                     └─{VBoxClient}(1429)
-           ├─VBoxClient(1441)───VBoxClient(1441)─┬─{VBoxClient}(1441)
-           │                                     └─{VBoxClient}(1441)
-           ├─VBoxClient(1448)───VBoxClient(1448)─┬─{VBoxClient}(1448)
-           │                                     ├─{VBoxClient}(1448)
-           │                                     └─{VBoxClient}(1448)
-           ├─VBoxClient(1456)───VBoxClient(1456)─┬─{VBoxClient}(1456)
-           │                                     └─{VBoxClient}(1456)
+	systemd(1)─┬─ModemManager(572)─┬─{ModemManager}(572)
+           	│                   └─{ModemManager}(572)
+           	├─NetworkManager(471)─┬─{NetworkManager}(471)
+           	│                     └─{NetworkManager}(471)
+          	├─VBoxClient(1429)───VBoxClient(1429)─┬─{VBoxClient}(1429)
+           	│                                     └─{VBoxClient}(1429)
+           	├─VBoxClient(1441)───VBoxClient(1441)─┬─{VBoxClient}(1441)
+           	│                                     └─{VBoxClient}(1441)
+          	├─VBoxClient(1448)───VBoxClient(1448)─┬─{VBoxClient}(1448)
+           	│                                     ├─{VBoxClient}(1448)
+           	│                                     └─{VBoxClient}(1448)
+           	├─VBoxClient(1456)───VBoxClient(1456)─┬─{VBoxClient}(1456)
+           	│                                     └─{VBoxClient}(1456)
 
 
 clear
