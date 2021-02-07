@@ -113,7 +113,7 @@ OPCIONES:
               most users to read.  This flag adds indentation for readability.
 
 
-ejemplos:
+EJEMPLOS:
 
  ip addr
            Shows addresses assigned to all network interfaces.
@@ -136,7 +136,7 @@ apt
 
 apt es una interface para el manejo del sistema de paquetes. Esta diseñada para el usuario final y permite algunas opciones mejores para uso interactivo.
 
-opciones:
+OPCIONES:
 
 
 pdate (apt-get(8))
@@ -191,7 +191,7 @@ edit-sources (work-in-progress)
            edit-sources lets you edit your sources.list(5) files in your preferred text editor while also providing basic sanity checks.man apt
 
 
-ejemplos:
+EJEMPLOS:
 
 apt show firefox
 
@@ -218,9 +218,9 @@ lsb_release
 
 Imprime informacion especifica de la distribucion
 
-opciones:
+OPCIONES:
 
-PTIONS
+
        The program follows the usual GNU command line syntax, with long options starting with two dashes (`--').  A summary of options are included below.
 
        -v, --version
@@ -249,7 +249,7 @@ PTIONS
               Show summary of options.
 
 
-ejemplos:
+EJEMPLOS:
 
 lsb_release -d
 Description:	Ubuntu 20.04.2 LTS
