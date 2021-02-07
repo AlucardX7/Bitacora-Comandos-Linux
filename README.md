@@ -871,9 +871,9 @@ Limpia la terminal
 
 OPCIONES:
 
--T TERM     use this instead of $TERM
-  -V          print curses-version
-  -x          do not try to clear scrollback
+	-T TERM     use this instead of $TERM
+  	-V          print curses-version
+  	-x          do not try to clear scrollback
 
 EJEMPLOS:
 
