@@ -879,12 +879,12 @@ EJEMPLOS:
 
 user@computername:~$clear -V
 
-ncurses 6.2.20200212
+	ncurses 6.2.20200212
 
 user@computername:~$clear -x
 
 
-user@computername:~$
+	user@computername:~$
 
 
 history
