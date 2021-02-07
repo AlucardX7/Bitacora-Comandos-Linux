@@ -101,7 +101,7 @@ OPCIONES:
 
        -iec   print human readable rates in IEC units (e.g. 1Ki = 1024).
 
- -br, -brief
+       -br, -brief
               Print only basic information in a tabular format for better readability. This
               option is currently only supported by ip addr show and ip link show commands.
 
@@ -115,7 +115,7 @@ OPCIONES:
 
 EJEMPLOS:
 
- ip addr
+       ip addr
            Shows addresses assigned to all network interfaces.
 
        ip neigh
