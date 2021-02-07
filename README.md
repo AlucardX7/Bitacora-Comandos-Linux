@@ -130,6 +130,13 @@ ejemplos:
            Show table routes.
 
 
+apt 
+====
+
+apt es una interface para el manejo del sistema de paquetes. Esta diseñada para el usuario final y permite algunas opciones mejores para uso interactivo.
+
+
+
 
 
 
