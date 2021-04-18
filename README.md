@@ -1544,6 +1544,23 @@ OPCIONES:
 
 EJEMPLOS:
 
-command
+Agregando repositorio MongoDB
 
-(1 tab)
+sudo add-apt-repository 'deb [arch=amd64] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse'
+
+	Ign:1 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 InRelease
+	Obj:2 https://download.docker.com/linux/ubuntu bionic InRelease      
+	Obj:3 https://download.docker.com/linux/ubuntu focal InRelease
+	Des:4 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 Release [2 989 B]
+	Des:5 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 Release.gpg [801 B]
+	Des:6 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0/multiverse amd64 Packages [15,9 kB]
+	Obj:7 http://security.ubuntu.com/ubuntu focal-security InRelease 
+	Obj:8 http://ppa.launchpad.net/longsleep/golang-backports/ubuntu focal InRelease                                      
+	Obj:9 http://ppa.launchpad.net/ubuntuhandbook1/gimp/ubuntu focal InRelease                                            
+	Obj:10 http://cr.archive.ubuntu.com/ubuntu focal InRelease                                                            
+	Obj:11 http://cr.archive.ubuntu.com/ubuntu focal-updates InRelease
+	Obj:12 http://cr.archive.ubuntu.com/ubuntu focal-backports InRelease
+	Descargados 19,7 kB en 21s (938 B/s)
+	Leyendo lista de paquetes... Hecho
+
+
