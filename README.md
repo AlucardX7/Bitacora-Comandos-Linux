@@ -1608,4 +1608,13 @@ El comando usermod modifica los archivos de la cuenta del sistema para reflejar 
 		-Z, --selinux-user SEUSER     new SELinux user mapping for the user account
 
 
+EJEMPLOS:
+
+La opción "-c" se utiliza para establecer un breve comentario (información) sobre la cuenta de usuario. Por ejemplo, agreguemos información sobre el usuario "tecmint", usando el siguiente comando.
+
+usermod -c "This is Tecmint" tecmint
+
+$
+
+
 
