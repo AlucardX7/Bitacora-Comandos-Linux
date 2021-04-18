@@ -1316,6 +1316,7 @@ OPCIONES:
 
 EJEMPLOS:
 
-command
+El siguiente comando de ejemplo de ssh utiliza parámetros comunes que se ven a menudo cuando se conecta a un servidor SSH remoto.
 
-(1 tab)
+localhost:~$ ssh -v -p 22 -C neo@remoteserver
+
