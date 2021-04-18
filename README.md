@@ -1422,7 +1422,16 @@ OPCIONES:
 
 EJEMPLOS:
 
-command
+Simplemente pasando el nombre de usuario al comando su, proporcionará la sesión de inicio de sesión después de la autenticación de contraseña como se muestra a continuación
 
-(1 tab)
+su guest
+
+	Password:
+
+	$
+
+su guest -c date
+
+	Password: 
+	Sat Jan  8 11:18:12 IST 2011
 
