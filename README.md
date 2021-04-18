@@ -1328,7 +1328,7 @@ su permite ejecutar comandos con un usuario y un ID de grupo sustitutos.
 
 OPCIONES:
 
-		-c, --command=command
+	   -c, --command=command
               Pass command to the shell with the -c option.
 
        -f, --fast
