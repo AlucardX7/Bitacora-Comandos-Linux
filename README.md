@@ -1519,4 +1519,31 @@ curl -D - https://www.keycdn.com/ -o /dev/null
 	100 65809    0 65809    0     0   131k      0 --:--:-- --:--:-- --:--:--  131k
 
 
+add-apt-repository
+==================
 
+add-apt-repository es un script para agregar entradas de apt sources.list.
+Se puede usar para agregar cualquier repositorio y también proporciona una abreviatura
+sintaxis para agregar un Launchpad PPA (Archivo de paquete personal)
+repositorio.
+
+OPCIONES:
+
+	-h, --help            show this help message and exit
+	-m, --massive-debug   Print a lot of debug information to the command line
+	-r, --remove          remove repository from sources.list.d directory
+	-s, --enable-source   Allow downloading of the source packages from the
+							repository
+	-y, --yes             Assume yes to all queries
+	-n, --no-update       Do not update package cache after adding
+	-u, --update          Update package cache after adding (legacy option)
+	-k KEYSERVER, --keyserver=KEYSERVER
+							Legacy option, unused.
+
+
+
+EJEMPLOS:
+
+command
+
+(1 tab)
