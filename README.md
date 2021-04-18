@@ -1430,6 +1430,8 @@ su guest
 
 	$
 
+Usando la opción -c, su permite ejecutar un comando específico en la cuenta de otro usuario y la salida se mostrará en la sesión de inicio de sesión actual como se muestra a continuación.
+
 su guest -c date
 
 	Password: 
