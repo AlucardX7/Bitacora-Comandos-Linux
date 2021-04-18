@@ -1193,3 +1193,75 @@ user@computername:~$nano -h
 	ponerse el número de columna a continuación de una coma.
 	Cuando el nombre de fichero es '-', nano lee datos de la entrada estándar.
 
+
+pacman
+=======
+
+pacman es una utilidad que administra paquetes de software en Linux. Utiliza archivos comprimidos simples como formato de paquete y mantiene una base de datos de paquetes basada en texto (más bien una jerarquía), en caso de que sea necesario realizar algunos ajustes a mano.
+
+pacman no se esfuerza por "hacer todo". Agregará, eliminará y actualizará paquetes en el sistema y le permitirá consultar la base de datos de paquetes para los paquetes, archivos y propietarios instalados. También intenta manejar las dependencias automáticamente y puede descargar paquetes desde un servidor remoto.
+
+OPCIONES:
+
+
+
+-b, --dbpath <path>
+
+    Specify an alternative database location (the default is /usr/local/var/lib/pacman). This should not be used unless you know what you are doing. NOTE: If specified, this is an absolute path, and the root path is not automatically prepended.
+-r, --root <path>
+
+    Specify an alternative installation root (default is /). This should not be used as a way to install software into /usr/local instead of /usr. NOTE: If database path or log file are not specified on either the command line or in pacman.conf(5), their default location will be inside this root path. NOTE: This option is not suitable for performing operations on a mounted guest system. See --sysroot instead.
+-v, --verbose
+
+    Output paths such as as the Root, Conf File, DB Path, Cache Dirs, etc.
+--arch <arch>
+
+    Specify an alternate architecture.
+--cachedir <dir>
+
+    Specify an alternative package cache location (the default is /usr/local/var/cache/pacman/pkg). Multiple cache directories can be specified, and they are tried in the order they are passed to pacman. NOTE: This is an absolute path, and the root path is not automatically prepended.
+--color <when>
+
+    Specify when to enable coloring. Valid options are always, never, or auto. always forces colors on; never forces colors off; and auto only automatically enables colors when outputting onto a tty.
+--config <file>
+
+    Specify an alternate configuration file.
+--debug
+
+    Display debug messages. When reporting bugs, this option is recommended to be used.
+--gpgdir <dir>
+
+    Specify a directory of files used by GnuPG to verify package signatures (the default is /usr/local/etc/pacman.d/gnupg). This directory should contain two files: pubring.gpg and trustdb.gpg. pubring.gpg holds the public keys of all packagers. trustdb.gpg contains a so-called trust database, which specifies that the keys are authentic and trusted. NOTE: This is an absolute path, and the root path is not automatically prepended.
+--hookdir <dir>
+
+    Specify a alternative directory containing hook files (the default is /usr/local/etc/pacman.d/hooks). Multiple hook directories can be specified with hooks in later directories taking precedence over hooks in earlier directories. NOTE: This is an absolute path, and the root path is not automatically prepended.
+--logfile <file>
+
+    Specify an alternate log file. This is an absolute path, regardless of the installation root setting.
+--noconfirm
+
+    Bypass any and all “Are you sure?” messages. It’s not a good idea to do this unless you want to run pacman from a script.
+--confirm
+
+    Cancels the effects of a previous --noconfirm.
+--disable-download-timeout
+
+    Disable defaults for low speed limit and timeout on downloads. Use this if you have issues downloading files with proxy and/or security gateway.
+--sysroot <dir>
+
+    Specify an alternative system root. Pacman will chroot and chdir into the system root prior to running. This allows mounted guest systems to be properly operated on. Any other paths given will be interpreted as relative to the system root. Requires root privileges.
+
+
+
+
+EJEMPLOS:
+
+
+sudo pacman -Sy
+
+:: Synchronizing package databases....
+
+core 			133.6 KiB
+extra 			1659.7 KiB
+comunnity 		4.8 MiB
+
