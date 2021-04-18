@@ -1257,7 +1257,7 @@ OPCIONES:
 EJEMPLOS:
 
 
-	sudo pacman -Sy
+sudo pacman -Sy
 
 	:: Synchronizing package databases....
 
@@ -1265,3 +1265,18 @@ EJEMPLOS:
 	extra 			1659.7 KiB
 	comunnity 		4.8 MiB
 
+
+ssh
+=======
+
+
+OPCIONES:
+
+(1 tab)
+
+
+EJEMPLOS:
+
+command
+
+(1 tab)
