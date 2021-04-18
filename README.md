@@ -1437,3 +1437,86 @@ su guest -c date
 	Password: 
 	Sat Jan  8 11:18:12 IST 2011
 
+
+curl
+====
+
+curl es una herramienta para transferir datos desde o hacia un servidor, utilizando uno de los protocolos compatibles (DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET y TFTP). El comando está diseñado para funcionar sin interacción del usuario.
+
+OPCIONES:
+
+
+ -m, -p, --preserve-environment      do not reset environment variables
+ -w, --whitelist-environment <list>  don't reset specified variables
+
+ -g, --group <grupo>             especifica el grupo primario
+ -G, --supp-group <group>        specify a supplemental group
+
+ -, -l, --login                  hace del intérprete de órdenes un intérprete de órdenes de inicio de sesión
+ -c, --command <orden>           pasa una orden sencilla al intérprete de órdenes con -c
+ --session-command <orden>       pasa una orden sencilla al intérprete de órdenes con -c
+                                   y no crea una sesión nueva
+ -f, --fast                      pasa -f al intérprete de órdenes (para csh o tcsh)
+ -s, --shell=<intérpr.órdenes>  ejecuta <intérpr.órdenes> si /etc/shells lo permite
+ -P, --pty                       create a new pseudo-terminal
+
+ -h, --help                      display this help
+ -V, --version                   display version
+
+
+
+EJEMPLOS:
+
+comando curl simple que simula una solicitud GET para la URL de un sitio web. Este comando generará la respuesta HTTP de la URL en cuestión.
+
+curl https://www.keycdn.com
+
+	HTTP/2 200
+	server: keycdn-engine
+	date: Sun, 18 Apr 2021 22:53:54 GMT
+	content-type: text/html
+	last-modified: Fri, 09 Apr 2021 22:33:45 GMT
+	vary: Accept-Encoding
+	etag: W/"6070d649-10111"
+	expires: Sun, 25 Apr 2021 22:53:54 GMT
+	cache-control: max-age=604800
+	strict-transport-security: max-age=31536000; includeSubdomains; preload
+	content-security-policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:
+	x-frame-options: SAMEORIGIN
+	x-xss-protection: 1; mode=block
+	x-content-type-options: nosniff
+	referrer-policy: no-referrer-when-downgrade
+	x-cache: HIT
+	x-edge-location: usmi
+	access-control-allow-origin: *
+
+
+El siguiente comando utiliza un par de opciones de curl para lograr el resultado deseado. La -D - le dice a curl que almacene y muestre los encabezados en stdout y la opción -o le dice a curl que descargue el recurso definido. Sin embargo, si no desea ningún resultado, simplemente agregue / dev / null al final del comando. Este ejemplo puede ser útil si está probando la velocidad de descarga de un activo pero no desea imprimir o guardar la salida.
+
+curl -D - https://www.keycdn.com/ -o /dev/null
+
+	% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+									Dload  Upload   Total   Spent    Left  Speed
+	0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0HTTP/2 200
+	server: keycdn-engine
+	date: Sun, 18 Apr 2021 22:55:02 GMT
+	content-type: text/html
+	last-modified: Fri, 09 Apr 2021 22:33:45 GMT
+	vary: Accept-Encoding
+	etag: W/"6070d649-10111"
+	expires: Sun, 25 Apr 2021 22:55:02 GMT
+	cache-control: max-age=604800
+	strict-transport-security: max-age=31536000; includeSubdomains; preload
+	content-security-policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:
+	x-frame-options: SAMEORIGIN
+	x-xss-protection: 1; mode=block
+	x-content-type-options: nosniff
+	referrer-policy: no-referrer-when-downgrade
+	x-cache: HIT
+	x-edge-location: usmi
+	access-control-allow-origin: *
+
+	100 65809    0 65809    0     0   131k      0 --:--:-- --:--:-- --:--:--  131k
+
+	
+
