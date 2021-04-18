@@ -1565,13 +1565,13 @@ sudo add-apt-repository 'deb [arch=amd64] https://repo.mongodb.org/apt/ubuntu bi
 
 
 
-	usermod
-	=======
+usermod
+========
 
-	El comando usermod modifica los archivos de la cuenta del sistema para reflejar los cambios que se especifican en la línea de comandos.
+El comando usermod modifica los archivos de la cuenta del sistema para reflejar los cambios que se especifican en la línea de comandos.
 
 	OPCIONES:
-	
+
 
 		-b, --badnames                allow bad names
 		-c, --comment COMENTARIO      nuevo valor del campo GECOS
