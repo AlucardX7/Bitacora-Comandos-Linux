@@ -1257,11 +1257,11 @@ OPCIONES:
 EJEMPLOS:
 
 
-sudo pacman -Sy
+	sudo pacman -Sy
 
-:: Synchronizing package databases....
+	:: Synchronizing package databases....
 
-core 			133.6 KiB
-extra 			1659.7 KiB
-comunnity 		4.8 MiB
+	core 			133.6 KiB
+	extra 			1659.7 KiB
+	comunnity 		4.8 MiB
 
