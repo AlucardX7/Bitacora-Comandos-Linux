@@ -1446,22 +1446,22 @@ curl es una herramienta para transferir datos desde o hacia un servidor, utiliza
 OPCIONES:
 
 
- -m, -p, --preserve-environment      do not reset environment variables
- -w, --whitelist-environment <list>  don't reset specified variables
+	-m, -p, --preserve-environment      do not reset environment variables
+	-w, --whitelist-environment <list>  don't reset specified variables
 
- -g, --group <grupo>             especifica el grupo primario
- -G, --supp-group <group>        specify a supplemental group
+	-g, --group <grupo>             especifica el grupo primario
+	-G, --supp-group <group>        specify a supplemental group
 
- -, -l, --login                  hace del intérprete de órdenes un intérprete de órdenes de inicio de sesión
- -c, --command <orden>           pasa una orden sencilla al intérprete de órdenes con -c
- --session-command <orden>       pasa una orden sencilla al intérprete de órdenes con -c
-                                   y no crea una sesión nueva
- -f, --fast                      pasa -f al intérprete de órdenes (para csh o tcsh)
- -s, --shell=<intérpr.órdenes>  ejecuta <intérpr.órdenes> si /etc/shells lo permite
- -P, --pty                       create a new pseudo-terminal
+	-, -l, --login                  hace del intérprete de órdenes un intérprete de órdenes de inicio de sesión
+	-c, --command <orden>           pasa una orden sencilla al intérprete de órdenes con -c
+	--session-command <orden>       pasa una orden sencilla al intérprete de órdenes con -c
+									y no crea una sesión nueva
+	-f, --fast                      pasa -f al intérprete de órdenes (para csh o tcsh)
+	-s, --shell=<intérpr.órdenes>  ejecuta <intérpr.órdenes> si /etc/shells lo permite
+	-P, --pty                       create a new pseudo-terminal
 
- -h, --help                      display this help
- -V, --version                   display version
+	-h, --help                      display this help
+	-V, --version                   display version
 
 
 
@@ -1518,5 +1518,5 @@ curl -D - https://www.keycdn.com/ -o /dev/null
 
 	100 65809    0 65809    0     0   131k      0 --:--:-- --:--:-- --:--:--  131k
 
-	
+
 
