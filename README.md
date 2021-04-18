@@ -1320,3 +1320,109 @@ El siguiente comando de ejemplo de ssh utiliza parámetros comunes que se ven a 
 
 localhost:~$ ssh -v -p 22 -C neo@remoteserver
 
+
+su
+===
+
+su permite ejecutar comandos con un usuario y un ID de grupo sustitutos.
+
+OPCIONES:
+
+-c, --command=command
+              Pass command to the shell with the -c option.
+
+       -f, --fast
+              Pass -f to the shell, which may or may not be useful,
+              depending on the shell.
+
+       -g, --group=group
+              Specify the primary group.  This option is available to
+              the root user only.
+
+       -G, --supp-group=group
+              Specify a supplementary group.  This option is available
+              to the root user only.  The first specified supplementary
+              group is also used as a primary group if the option
+              --group is not specified.
+
+       -, -l, --login
+              Start the shell as a login shell with an environment
+              similar to a real login:
+
+                 o      clears all the environment variables except TERM
+                        and variables specified by
+                        --whitelist-environment
+
+                 o      initializes the environment variables HOME,
+                        SHELL, USER, LOGNAME, and PATH
+
+                 o      changes to the target user's home directory
+
+                 o      sets argv[0] of the shell to '-' in order to
+                        make the shell a login shell
+
+       -m, -p, --preserve-environment
+              Preserve the entire environment, i.e., do not set HOME,
+              SHELL, USER or LOGNAME.  This option is ignored if the
+              option --login is specified.
+
+       -P, --pty
+              Create a pseudo-terminal for the session. The independent
+              terminal provides better security as the user does not
+              share a terminal with the original session.  This can be
+              used to avoid TIOCSTI ioctl terminal injection and other
+              security attacks against terminal file descriptors.  The
+              entire session can also be moved to the background (e.g.,
+              "su --pty - username -c application &").  If the pseudo-
+              terminal is enabled, then su works as a proxy between the
+              sessions (copy stdin and stdout).
+
+              This feature is mostly designed for interactive sessions.
+              If the standard input is not a terminal, but for example a
+              pipe (e.g., echo "date" | su --pty), then the ECHO flag
+              for the pseudo-terminal is disabled to avoid messy output.
+
+       -s, --shell=shell
+              Run the specified shell instead of the default.  The shell
+              to run is selected according to the following rules, in
+              order:
+
+                 o      the shell specified with --shell
+
+                 o      the shell specified in the environment variable
+                        SHELL, if the --preserve-environment option is
+                        used
+
+                 o      the shell listed in the passwd entry of the
+                        target user
+
+                 o      /bin/sh
+
+              If the target user has a restricted shell (i.e., not
+              listed in /etc/shells), the --shell option and the SHELL
+              environment variables are ignored unless the calling user
+              is root.
+
+       --session-command=command
+              Same as -c, but do not create a new session.
+              (Discouraged.)
+
+       -w, --whitelist-environment=list
+              Don't reset the environment variables specified in the
+              comma-separated list when clearing the environment for
+              --login. The whitelist is ignored for the environment
+              variables HOME, SHELL, USER, LOGNAME, and PATH.
+
+       -V, --version
+              Display version information and exit.
+
+       -h, --help
+              Display help text and exit.
+
+
+EJEMPLOS:
+
+command
+
+(1 tab)
+
