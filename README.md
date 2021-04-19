@@ -1902,6 +1902,45 @@ $ echo The value of variable x = $x
 	The value of variable x = 10
 
 
+dmidecode 
+==========
+
+Es una herramienta para volcar el contenido de la tabla DMI de una computadora (algunos dicen SMBIOS) en un formato legible por humanos. Esta tabla contiene una descripción de los componentes de hardware del sistema, así como otra información útil, como los números de serie y la revisión del BIOS. Gracias a esta tabla, puede recuperar esta información sin tener que buscar el hardware real. Si bien este es un buen punto en términos de velocidad y seguridad de los informes, esto también hace que la información presentada posiblemente no sea confiable.
+
+OPCIONES:
+
+
+	-d, --dev-mem FILE
+		Read memory from device FILE (default: /dev/mem) 
+	-q, --quiet
+		Be less verbose. Unknown, inactive and OEM -specific entries are not displayed. Meta-data and handle references are hidden. 
+	-s, --string KEYWORD
+		Only display the value of the DMI string identified by KEYWORD. KEYWORD must be a keyword from the following list: bios-vendor, bios-version, bios-release-date, system-manufacturer, system-product-name, system-version, system-serial-number, system-uuid, baseboard-manufacturer, baseboard-product-name, baseboard-version, baseboard-serial-number, baseboard-asset-tag, chassis-manufacturer, chassis-type, chassis-version, chassis-serial-number, chassis-asset-tag, processor-family, processor-manufacturer, processor-version, processor-frequency. Each keyword corresponds to a given DMI type and a given offset within this entry type. Not all strings may be meaningful or even defined on all systems. Some keywords may return more than one result on some systems (e.g. processor-version on a multi-processor system). If KEYWORD is not provided or not valid, a list of all valid keywords is printed and dmidecode exits with an error. This option cannot be used more than once. 
+	-t, --type TYPE
+		Only display the entries of type TYPE. TYPE can be either a DMI type number, or a comma-separated list of type numbers, or a keyword from the following list: bios, system, baseboard, chassis, processor, memory, cache, connector, slot. Refer to the DMI TYPES section below for details. If this option is used more than once, the set of displayed entries will be the union of all the given types. If TYPE is not provided or not valid, a list of all valid keywords is printed and dmidecode exits with an error. 
+	-u, --dump
+		Do not decode the entries, dump their contents as hexadecimal instead. Note that this is still a text output, no binary data will be thrown upon you. The strings attached to each entry are displayed as both hexadecimal and ASCII . This option is mainly useful for debugging. 
+	--dump-bin FILE
+		Do not decode the entries, instead dump the DMI data to a file in binary form. The generated file is suitable to pass to --from-dump later. 
+	--from-dump FILE
+		Read the DMI data from a binary file previously generated using --dump-bin. 
+	-h, --help
+		Display usage information and exit 
+	-V, --version
+		Display the version and exit
+
+	Options --string, --type and --dump-bin determine the output format and are mutually exclusive. 
+
+
+EJEMPLOS:
+
+command
+
+(1 tab)
+
+
+
+
 
 
 
