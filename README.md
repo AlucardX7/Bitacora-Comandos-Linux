@@ -1705,3 +1705,42 @@ yum remove firefox
 	--> Running transaction check
 	---> Package firefox.i686 0:10.0.6-1.el6.centos set to be erased
 
+
+set
+====
+
+El comando set de Linux se usa para configurar y desarmar ciertos indicadores o configuraciones dentro del entorno de shell. Estos indicadores y configuraciones determinan el comportamiento de un script definido y ayudan a ejecutar las tareas sin enfrentar ningún problema. Los valores de los atributos y parámetros del shell se pueden cambiar o mostrar mediante el comando set.
+
+OPCIONES:
+
+
+    -a: It is used to mark variables that are modified or created for export.
+    -b: It is used to notify of job termination immediately.
+    -e: It is used to exit immediately if a command exits with a non-zero status.
+    -f: It is used to disable the file name generation (globbing).
+    -h: It is used to save the location of commands where they looked up.
+    -k: It is used to place all assignment arguments in the environment variable of a command, except those that precede the command name.
+    -m: It is used to enable Job control.
+    -n: It is used to read commands.
+    -o: It is used for option-name.
+    -p: It is used to disable the processing of the '$ENV' file and import shell functions. It is turned on whenever the real and effective user ids do not match. Turning off this option may cause the working uid and gid to be set as the authorized uid and gid.
+    -t: It is used to exit from the command after executing one command.
+    -u: It is used to treat unset variables as an error when substituting.
+    -v: It is used to print shell input lines.
+    -x: It is used to print commands and their arguments in a sequential way (as they are executed).
+    -B: It is used to perform brace expansion by the Shell.
+    -C: It is used to disallow existing regular files to be overwritten by redirection of output.
+    -E: It is used if the ERR trap is inherited by the shell functions.
+    -H: It is used to enable style history substitution. By default, it is on when the shell is interactive.
+    -P: It is used if we do not want to follow symbolic links when executing commands.
+    -T: If this flag is set, the DEBUG trap is inherited by the shell functions.
+
+
+
+EJEMPLOS:
+
+command
+
+(1 tab)
+
+
