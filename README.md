@@ -2078,6 +2078,19 @@ OPCIONES:
 
 EJEMPLOS:
 
-command
+free -h
 
-(1 tab)
+				total        used        free      shared  buff/cache   available
+	Mem:            50G        116M         49G         72K        431M         49G
+	Swap:           13G          0B         13G
+
+
+free -g
+
+				total        used        free      shared  buff/cache   available
+	Mem:             50           0          49           0           0          49
+	Swap:            13           0          13
+
+
+
+
