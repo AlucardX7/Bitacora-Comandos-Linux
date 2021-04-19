@@ -2188,3 +2188,21 @@ OPCIONES:
 
 EJEMPLOS:
 
+Si desea consultar el resumen de todos los dispositivos de intercambio y particiones actualmente habilitados, debe usar el comando swapon -s como se muestra a continuación.
+
+swapon -s
+
+	Filename                                Type            Size    Used    Priority
+	/dev/dm-1                               partition       2097148 776     -2
+	/root/testswap                          file            282056  0       -3
+	/dev/dm-2                               partition       204796  0       -4
+
+
+Si desea habilitar la opción de descarte, debe usar el comando swapon -d como se muestra a continuación.
+
+swapon -d
+
+	NAME           TYPE        SIZE USED PRIO
+	/dev/dm-1      partition     2G 776K   -2
+	/root/testswap file      275.5M   0B   -3
+	/dev/dm-2      partition   200M   0B   -4
