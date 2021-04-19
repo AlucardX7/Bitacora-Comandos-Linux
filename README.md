@@ -2271,3 +2271,17 @@ OPCIONES:
 
 
 EJEMPLOS:
+
+df -a
+
+	/dev/sda10      78873504 67528540   7315320  91% /home
+	/dev/sda1         507904    30908    476996   7% /boot/efi
+	tmpfs             804624       12    804612   1% /run/user/121
+	tmpfs             804624       64    804560   1% /run/user/1000
+	gvfsd-fuse             0        0         0    - /run/user/1000/gvfs
+
+
+df -h /home/mandeep
+
+	Filesystem      Size  Used Avail Use% Mounted on
+	/dev/sda10       76G   65G  7.0G  91% /home
