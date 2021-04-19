@@ -1884,12 +1884,23 @@ OPCIONES:
 
 
 
-
 EJEMPLOS:
 
-command
+Despliega palabra hola
 
-(1 tab)
+$echo hola
+
+	hola
+
+
+Declare una variable y repita su valor. Por ejemplo, declare una variable de x y asigne su valor = 10.
+
+$ x=10
+
+$ echo The value of variable x = $x 
+
+	The value of variable x = 10
+
 
 
 
