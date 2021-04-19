@@ -1758,7 +1758,7 @@ Es un comando incorporado que le indica a shell que realice una evaluación de e
 
 OPCIONES:
 
--a  Mark variables which are modified or created for export.
+	  -a  Mark variables which are modified or created for export.
       -b  Notify of job termination immediately.
       -e  Exit immediately if a command exits with a non-zero status.
       -f  Disable file name generation (globbing).
