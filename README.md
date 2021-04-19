@@ -1827,9 +1827,16 @@ OPCIONES:
 
 EJEMPLOS:
 
-command
+Para deshabilitar el comportamiento predeterminado de Bash, ejecute el comando de la siguiente manera:
 
-(1 tab)
+set -C  
+
+Para detener un script de inmediato, ejecute el siguiente comando:
+
+set -e 
+
+
+
 
 
 
