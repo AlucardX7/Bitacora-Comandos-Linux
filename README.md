@@ -1695,7 +1695,13 @@ OPCIONES:
 
 EJEMPLOS:
 
-command
+Remover software
 
-(1 tab)
+yum remove firefox
+
+	Loaded plugins: fastestmirror
+	Setting up Remove Process
+	Resolving Dependencies
+	--> Running transaction check
+	---> Package firefox.i686 0:10.0.6-1.el6.centos set to be erased
 
