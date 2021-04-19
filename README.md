@@ -2206,3 +2206,44 @@ swapon -d
 	/dev/dm-1      partition     2G 776K   -2
 	/root/testswap file      275.5M   0B   -3
 	/dev/dm-2      partition   200M   0B   -4
+
+
+
+mount
+=======
+
+Monta un sistema de archivos
+
+OPCIONES:
+
+	-a, --all               mount all filesystems mentioned in fstab
+	-c, --no-canonicalize   don't canonicalize paths
+	-f, --fake              dry run; skip the mount(2) syscall
+	-F, --fork              fork off for each device (use with -a)
+	-T, --fstab <path>      alternative file to /etc/fstab
+	-i, --internal-only     don't call the mount.<type> helpers
+	-l, --show-labels       show also filesystem labels
+	-n, --no-mtab           don't write to /etc/mtab
+	-o, --options <list>    comma-separated list of mount options
+	-O, --test-opts <list>  limit the set of filesystems (use with -a)
+	-r, --read-only         mount the filesystem read-only (same as -o ro)
+	-t, --types <list>      limit the set of filesystem types
+		--source <src>      explicitly specifies source (path, label, uuid)
+		--target <target>   explicitly specifies mountpoint
+	-v, --verbose           say what is being done
+	-w, --rw, --read-write  mount the filesystem read-write (default)
+
+	-h, --help              display this help
+	-V, --version           display version
+
+
+
+EJEMPLOS:
+
+La sintaxis general del comando de montaje para montar un dispositivo:
+
+$mount -t type device destination_dir
+
+El archivo de dispositivo para CD existiría en el directorio / dev. Por ejemplo, se montará un dispositivo de CD-ROM como se muestra a continuación.
+
+$mount -t iso9660 -o ro /dev/cdrom /mnt
