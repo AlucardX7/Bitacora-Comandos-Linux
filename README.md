@@ -1934,9 +1934,41 @@ OPCIONES:
 
 EJEMPLOS:
 
-command
+Despliega informacion del BIOS
 
-(1 tab)
+dmidecode --type bios
+
+	dmidecode 2.12
+	SMBIOS 2.5 present.
+	Handle 0x0005, DMI type 0, 24 bytes
+	BIOS Information
+			Vendor: Intel Corp.
+			Version: QSSC-S4R.QCI.01.00.0037.061120141015
+			Release Date: 06/11/2014
+			Address: 0xF0000
+			Runtime Size: 64 kB
+			ROM Size: 16384 kB
+			Characteristics:
+					PCI is supported
+					PNP is supported
+					BIOS is upgradeable
+					BIOS shadowing is allowed
+					Boot from CD is supported
+					Selectable boot is supported
+					EDD is supported
+					3.5"/2.88 MB floppy services are supported (int 13h)
+					Print screen service is supported (int 5h)
+					8042 keyboard services are supported (int 9h)
+					Serial services are supported (int 14h)
+					CGA/mono video services are supported (int 10h)
+					ACPI is supported
+					USB legacy is supported
+					LS-120 boot is supported
+					ATAPI Zip drive boot is supported
+					Function key-initiated network boot is supported
+					Targeted content distribution is supported
+			BIOS Revision: 17.18
+			Firmware Revision: 0.0
 
 
 
