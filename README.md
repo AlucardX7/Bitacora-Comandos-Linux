@@ -2394,3 +2394,22 @@ OPCIONES:
 EJEMPLOS:
 
 
+du /home/mandeep/test
+
+	44    /home/mandeep/test/data
+	2012    /home/mandeep/test/system design
+	24    /home/mandeep/test/table/sample_table/tree
+	28    /home/mandeep/test/table/sample_table
+	32    /home/mandeep/test/table
+	100104    /home/mandeep/test
+
+
+du -h /home/mandeep/test 
+
+	44K    /home/mandeep/test/data
+	2.0M    /home/mandeep/test/system design
+	24K    /home/mandeep/test/table/sample_table/tree
+	28K    /home/mandeep/test/table/sample_table
+	32K    /home/mandeep/test/table
+	98M    /home/mandeep/test
+
