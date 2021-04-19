@@ -1972,8 +1972,28 @@ dmidecode --type bios
 
 
 
+Ejecute el siguiente comando dmidecode para mostrar información sobre el chasis
 
+dmidecode -t chassis
 
-
+	dmidecode 2.12
+	SMBIOS 2.5 present.
+	Handle 0x0004, DMI type 3, 22 bytes
+	Chassis Information
+			Manufacturer: ..............................
+			Type: Main Server Chassis
+			Lock: Not Present
+			Version: 32S4RCS0010
+			Serial Number: QTFCVR1110136
+			Asset Tag: ....................
+			Boot-up State: Safe
+			Power Supply State: Safe
+			Thermal State: Safe
+			Security Status: Unknown
+			OEM Information: 0x01000181
+			Height: 1 U
+			Number Of Power Cords: 1
+			Contained Elements: 0
+			SKU Number: Not Specified
 
 
