@@ -2247,3 +2247,27 @@ $mount -t type device destination_dir
 El archivo de dispositivo para CD existiría en el directorio / dev. Por ejemplo, se montará un dispositivo de CD-ROM como se muestra a continuación.
 
 $mount -t iso9660 -o ro /dev/cdrom /mnt
+
+
+df
+===
+
+El comando df (abreviatura de disk free) se utiliza para mostrar información relacionada con los sistemas de archivos sobre el espacio total y el espacio disponible.
+
+
+OPCIONES:
+
+	-a, –all : includes pseudo, duplicate and inaccessible file systems.
+	-B, –block-size=SIZE : scales sizes by SIZE before printing them.
+	-h, –human-readable : print sizes in power of 1024
+	-H, –si: print sizes in power of 1000
+	-i, –inodes : list inode information instead of block usage
+	-l, –local : limit listing to local file systems
+	-P, –portability : use POSIX output format
+	–sync : invoke sync before getting usage info
+	–total : elide all entries insignificant to available space, and produce grand total
+	-t, –type=TYPE : limit listing to file systems of type TYPE
+	-T, –print-type : print file system type
+
+
+EJEMPLOS:
