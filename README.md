@@ -1997,3 +1997,87 @@ dmidecode -t chassis
 			SKU Number: Not Specified
 
 
+free
+=====
+
+Muestra la cantidad de memoria disponible y utilizada en el sistema
+
+OPCIONES:
+
+	   -b, --bytes
+              Display the amount of memory in bytes.
+
+       -k, --kibi
+              Display the amount of memory in kibibytes.  This is the
+              default.
+
+       -m, --mebi
+              Display the amount of memory in mebibytes.
+
+       -g, --gibi
+              Display the amount of memory in gibibytes.
+
+       --tebi Display the amount of memory in tebibytes.
+
+       --pebi Display the amount of memory in pebibytes.
+
+       --kilo Display the amount of memory in kilobytes. Implies --si.
+
+       --mega Display the amount of memory in megabytes. Implies --si.
+
+       --giga Display the amount of memory in gigabytes. Implies --si.
+
+       --tera Display the amount of memory in terabytes. Implies --si.
+
+       --peta Display the amount of memory in petabytes. Implies --si.
+
+       -h, --human
+              Show all output fields automatically scaled to shortest
+              three digit unit and display the units of print out.
+              Following units are used.
+
+                B = bytes
+                Ki = kibibyte
+                Mi = mebibyte
+                Gi = gibibyte
+                Ti = tebibyte
+                Pi = pebibyte
+
+              If unit is missing, and you have exbibyte of RAM or swap,
+              the number is in tebibytes and columns might not be
+              aligned with header.
+
+       -w, --wide
+              Switch to the wide mode. The wide mode produces lines
+              longer than 80 characters. In this mode buffers and cache
+              are reported in two separate columns.
+
+       -c, --count count
+              Display the result count times.  Requires the -s option.
+
+       -l, --lohi
+              Show detailed low and high memory statistics.
+
+       -s, --seconds delay
+              Continuously display the result delay  seconds apart.  You
+              may actually specify any floating point number for delay
+              using either . or , for decimal point.  usleep(3) is used
+              for microsecond resolution delay times.
+
+       --si   Use kilo, mega, giga etc (power of 1000) instead of kibi,
+              mebi, gibi (power of 1024).
+
+       -t, --total
+              Display a line showing the column totals.
+
+       --help Print help.
+
+       -V, --version
+              Display version information.
+
+
+EJEMPLOS:
+
+command
+
+(1 tab)
